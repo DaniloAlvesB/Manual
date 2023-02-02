@@ -21,7 +21,17 @@ function render_list(){
                 ${nav_list}
                 <div id="list_content" style="overflow-x: hidden; overflow-y: scroll; max-height: 68vh; min-height: 68vh"></div>
             </div>
-            <div id="text_content" class="col-12 col-md-8 rounded p-2" style="overflow-x: hidden; overflow-y: scroll; max-height: 75vh"></div>
+            <div id="text_content" class="col-12 col-md-8 rounded p-2" style="overflow-x: hidden; overflow-y: scroll; max-height: 75vh">
+                <h3 class="m-2">Olá!</h3>
+                <hr>
+                <p class="mx-2">
+                    Neste manual você irá aprender a como realizar diversas funções que o nosso
+                    SISTEMA ESCOLA e o PORTAL DO ALUNO oferecem.
+                    Aprenderá também como proceder no seu primeiro acesso, o que é cada local de acesso,
+                    suas principais funcionalidades e recursos.<br>
+                    Espero que a nossa parceria seja de muito sucesso!
+                </p>
+            </div>
         `
 
     }

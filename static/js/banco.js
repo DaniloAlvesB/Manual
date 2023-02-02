@@ -8,7 +8,7 @@ let title1 = [
     ["Cadatro de aluno", 'c_cadastroaluno', false, 4], //3
     ["Matrícula do aluno", 'c_matriculaaluno', true, 5],      //4
     ["Acessando o portal do Aluno", 'c_acportalaluno', true, 6],      //5
-    ["Alterando número da aula e status do curso", 'c_altnumaulastatuscurso', false, 7],      //6
+    ["Alterando aula e status do curso", 'c_altnumaulastatuscurso', false, 10],      //6
     ["Guia Manutenção", 'c_guiamanutencao', true, 8],      //7
     ["Guia Movimentação", 'c_guiamovimentacao', true, 9],      //8
     ["Guia Relatórios", 'c_guiarelatorios', true, 10],      //9
@@ -36,17 +36,18 @@ let title2 = [
     ["Tela Inicial do Portal do Aluno", "acessandoportal_telainicial", 9, 5],
 
     //Title - 7
-    ["Cursos", "manutencao_cursos", , 7],
-    ["Módulos", "manutencao_modulos", 0, 7],
-    ["Funcionários", "manutencao_func", 1, 7],
-    ["Computadores", "manutencao_comp", 2, 7],
-    ["Horário de aula", "manutencao_horaaula", 3, 7],
-    ["Tipos de marketing", "manutencao_tiposmark", 4, 7],
-    ["Plano de contas", "manutencao_planoconta", 15, 7],
-    ["Mot. canc./finaliza.", "manutencao_motcancfina", 16, 7],
-    ["Contas do caixa", "manutencao_contascaixa", 17, 7],
-    ["Faixa etária", "manutencao_faixaetaria", 18, 7],
-    ["Telemarketing", "manutencao_telemark", 19, 7],
+    ["Sobre a guia Manutenção", "manutencao_sobre", 11, 7],
+    ["Cursos", "manutencao_cursos", 12, 7],
+    ["Módulos", "manutencao_modulos", 13, 7],
+    ["Funcionários", "manutencao_func", 14, 7],
+    ["Computadores", "manutencao_comp", 14, 7],
+    ["Horário de aula", "manutencao_horaaula", 15, 7],
+    ["Tipos de marketing", "manutencao_tiposmark", 16, 7],
+    ["Plano de contas", "manutencao_planoconta", 18, 7],
+    ["Mot. canc./finaliza.", "manutencao_motcancfina", 18, 7],
+    ["Contas do caixa", "manutencao_contascaixa", 19, 7],
+    ["Faixa etária", "manutencao_faixaetaria", 20, 7],
+    ["Telemarketing", "manutencao_telemark", 21, 7],
 ]
 
 let content = [
@@ -338,10 +339,88 @@ let content = [
 
             Após inserir a senha, uma tela semelhante a esta abaixo ficará visível. Sendo possível
             alterar a aula ou concluir o curso atual. Sendo ele aula normal ou digitação.
+
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/area_inst_pa.jpg" alt="Campo nome do aluno">
+            <br> <br>
+
         </p>
     `, `
         portal do aluno, acesso, online, senha, instrutor
     `,
         "http://www.videostutoriais.grupooportunidade.com.br/suporte/videos/sistema/2.html"
+    ],
+
+    //10
+    [`Alterando número de aula e status de curso`,
+        `
+        <p class="mx-2">
+            Caso seja necessário, o sistema permite que você altere o a aula que o aluno está, e
+            também consiga alterar o status do curso. <br>
+            Quando o aluno inicia um curso, o sistema automaticamente muda o status para EM
+            ANDAMENTO, anteriormente ao início do curso, o status permanece como ESPERA.
+            Ao concluir o curso, o status fica como CONCLUÍDO. O aluno só consegue fazer a
+            aula se o status estiver EM ANDAMENTO. <br>
+            Para poder modificar o status o sistema irá pedir uma senha, a senha do gerente. Ela
+            pode ser encontrada e configurada no menu OUTRAS OPÇÕES > PARÂMETROS >
+            GERAIS. <br> <br>
+            Para configurar a senha, basta clicar em EDITAR e inserir a senha que desejar. <br>
+            
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/inst_param.jpg" alt="Campo nome do aluno">
+            <br> <br>
+
+            Configurada a senha do gerente, podemos então fazer o processo de troca de status ou
+            de número da aula. <br>
+
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/info_mat.jpg" alt="Campo nome do aluno">
+            <br> <br>
+
+            Para fazer a alteração do status ou número de aula, basta clicar no lápis de edição. Ao
+            clicar sobre ele o será possível alterar o campo em questão. Após colocar o status ou
+            aula que deseja, basta clicar no que ficará visível para salvar a sua edição. Ao
+            clicar sobre ele aparecerá a caixa onde você irá inserir a senha do gerente que foi
+            configurada anteriormente. Insira a senha e clique em ok. <br>
+            Pronto, seu status ou número de aula terá sido alterado! <br>
+        </p>
+        `, `
+            aula, número, numero, alterar, status, curso
+        `,
+        "http://www.videostutoriais.grupooportunidade.com.br/suporte/videos/hardlock/4.html"
+    ],
+
+    //11
+    [`Sobre a guia Manutenção`,
+        `
+        <p class="mx-2">
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/guia_manuten.jpg" alt="Campo nome do aluno">
+            <br> <br>
+
+            Nessa guia será possível alterar algumas informações dentro do sistema mais voltadas a
+            área administrativa da escola. Falaremos de cada uma dessas abas abaixo. 
+        </p>
+        `, `
+            guia, aba, manutenção, manutencao
+        `,
+        ""
+    ],
+
+    //12
+    [`Cursos`,
+        `
+        <p class="mx-2">
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/guia_manuten.jpg" alt="Campo nome do aluno">
+            <br> <br>
+
+            Nessa guia será possível alterar algumas informações dentro do sistema mais voltadas a
+            área administrativa da escola. Falaremos de cada uma dessas abas abaixo. 
+        </p>
+        `, `
+            guia, aba, manutenção, manutencao
+        `,
+        ""
     ],
 ]
