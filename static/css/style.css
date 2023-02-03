@@ -21,6 +21,7 @@ div::-webkit-scrollbar-thumb {
 }
 
 .title-menual{
+    text-decoration: none;
     background-color: transparent;
     color: rgb(41, 41, 41);
     transition: 0.5s;
@@ -31,14 +32,16 @@ div::-webkit-scrollbar-thumb {
 }
 
 .subtitle-manual{
-    background-color: rgba(0, 0, 0, 0.062);
+    background-color: rgba(0, 0, 0, 0);
     color: rgb(41, 41, 41);
     cursor: pointer;
+    border: 1px solid transparent;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.137);
     transition: 0.5s;
 }
 
 .subtitle-manual:hover{
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(250, 250, 250);
     color: rgb(31, 175, 180);
 }
 
@@ -52,4 +55,8 @@ div::-webkit-scrollbar-thumb {
 
 .img-exp:hover{
     transform: scale(1.045);
+}
+
+.bg-white-d{
+    background-image: linear-gradient(to bottom, white, rgb(250, 250, 250));
 }

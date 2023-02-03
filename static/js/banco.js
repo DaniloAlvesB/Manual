@@ -40,14 +40,14 @@ let title2 = [
     ["Cursos", "manutencao_cursos", 12, 7],
     ["Módulos", "manutencao_modulos", 13, 7],
     ["Funcionários", "manutencao_func", 14, 7],
-    ["Computadores", "manutencao_comp", 14, 7],
-    ["Horário de aula", "manutencao_horaaula", 15, 7],
-    ["Tipos de marketing", "manutencao_tiposmark", 16, 7],
+    ["Computadores", "manutencao_comp", 15, 7],
+    ["Horário de aula", "manutencao_horaaula", 16, 7],
+    ["Tipos de marketing", "manutencao_tiposmark", 17, 7],
     ["Plano de contas", "manutencao_planoconta", 18, 7],
-    ["Mot. canc./finaliza.", "manutencao_motcancfina", 18, 7],
-    ["Contas do caixa", "manutencao_contascaixa", 19, 7],
-    ["Faixa etária", "manutencao_faixaetaria", 20, 7],
-    ["Telemarketing", "manutencao_telemark", 21, 7],
+    ["Mot. canc./finaliza.", "manutencao_motcancfina", 19, 7],
+    ["Contas do caixa", "manutencao_contascaixa", 20, 7],
+    ["Faixa etária", "manutencao_faixaetaria", 21, 7],
+    ["Telemarketing", "manutencao_telemark", 22, 7],
 ]
 
 let content = [
@@ -412,14 +412,231 @@ let content = [
         `
         <p class="mx-2">
             <br>
-            <img class="img-fluid my-2 img-exp" src="static/images/guia_manuten.jpg" alt="Campo nome do aluno">
+            <img class="img-fluid my-2 img-exp" src="static/images/manutencao/cursos.jpg" alt="Campo nome do aluno">
             <br> <br>
 
-            Nessa guia será possível alterar algumas informações dentro do sistema mais voltadas a
-            área administrativa da escola. Falaremos de cada uma dessas abas abaixo. 
+            A aba de cursos mostra todos os cursos que há disponível na sua plataforma. Caso
+            algum curso novo seja lançado, ele vai para essa área, mas na aba de cursos NÃO
+            LIBERADOS. Para que o curso fique liberado na sua plataforma, basta clicar no botão
+            SINCRONIZAR DADOS na guia Outras Opções > Parâmetros. 
         </p>
         `, `
-            guia, aba, manutenção, manutencao
+            guia, aba, manutenção, manutencao, curso, cursos
+        `,
+        ""
+    ],
+
+    //13
+    [`Módulos`,
+        `
+        <p class="mx-2">
+            Nessa guia podemos ver todos os módulos criados dentro do nosso sistema escola.
+            Alguns módulos vão pré-criados, automaticamente com o sistema. Você pode alterá-los
+            e até mesmo criar novos módulos. <br>
+
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/manutencao/modulos.jpg" alt="Campo nome do aluno">
+            <br> <br>
+
+            Para criar um novo módulo, basta você clicar no botão + NOVO MÓDULO. Inserir o
+            título e o valor do módulo e clicar em gravar. <br>
+
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/manutencao/modulos2.jpg" alt="Campo nome do aluno">
+            <br> <br>
+
+            Após clicar em gravar, será necessário clicar no botão EDITAR para podermos inserir
+            os cursos desejados dentro do módulo. <br>
+
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/manutencao/modulos3.jpg" alt="Campo nome do aluno">
+            <br> <br>
+
+            Os cursos são inseridos clicando no botão de + que está na frente de cada curso. Após
+            inserir todos os que deseja, é só clicar em SAIR. <br>
+
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/manutencao/modulos4.jpg" alt="Campo nome do aluno">
+            <br> <br>
+
+            Após inserir todos os cursos desejados, o próximo passo é clicar novamente em gravar.
+            E o novo módulo estará pronto para ser inserido nas matrículas de seus alunos.
+
+        </p>
+        `, `
+            guia, aba, manutenção, manutencao, módulo, módulos, modulo, modulos
+        `,
+        ""
+    ],
+
+    //14
+    [`Funcionário`,
+        `
+        <p class="mx-2">
+            O sistema escola permite que sejam criados logins de acesso ao sistema para cada
+            funcionário que houver na escola. Dessa forma será possível verificar quem fez qual
+            alteração nas matrículas, quem fez abertura de caixa, entre outras informações. <br>
+
+            Criando um funcionário também é possível limitar o acesso dos funcionários as abas do
+            sistema. Por exemplo, eu posso permitir que meu instrutor tenha acesso para cadastrar e
+            matricular alunos, mas que não tenha acesso a movimentação de caixa. Isso é possível
+            criando perfis com permissões diferentes. <br> <br>
+
+            A criação de perfil será vista mais para frente na guia OUTRAS OPÇÕES. <br>
+
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/manutencao/func1.jpg" alt="Campo nome do aluno">
+            <br> <br>
+
+            Após inserir todas as informações, Login e senha do funcionário, é só clicar em gravar e
+            o funcionário conseguirá acessar o sistema escola com o Login dele. <br>
+            Esse Login é apenas para o SISTEMA ESCOLA, caso o funcionário queira fazer alguns
+            cursos como teste, será necessário criar um cadastro e uma matricula para ele assim
+            como é criado para os demais alunos. Dessa forma ele terá acesso ao portal do aluno
+            para assistir as aulas.
+        </p>
+        `, `
+            guia, aba, manutenção, manutencao, funcionário, funcionários, funcionario, funcionarios, func
+        `,
+        ""
+    ],
+
+    //15
+    [`Computadores`,
+        `
+        <p class="mx-2">
+            O número de computadores limita a quantidade de alunos que eu posso colocar por horário. Se o
+            meu sistema tem 10 computadores ativos, consigo colocar 10 alunos no horário das 8h às 9h. 10
+            alunos no horário das 10h às 11h e assim por diante. <br>
+            Caso queira, o sistema permite aumentar essa quantidade de computadores dentro do sistema.
+            Na guia COMPUTADORES, clique no botão + NOVO COMPUTADOR. <br>
+            Na tela abaixo, insira o nome do computador, que pode seguir a ordem, por exemplo 11º e o
+            laboratório. Não é obrigatório colocar o IP, mas o nome do computador e o laboratório sim. <br> <br>
+            Após colocar as informações, basta clicar em gravar. <br>
+
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/manutencao/comp1.jpg" alt="Campo nome do aluno">
+            <br> <br>
+        </p>
+        `, `
+            guia, aba, manutenção, manutencao, comp, computador, computadores, PC, máquina, maquina
+        `,
+        ""
+    ],
+
+    //16
+    [`Horário de aula`,
+        `
+        <p class="mx-2">
+            O sistema escola vem pré configurado com horários que vão das 8 horas da manhã, até
+            as 21 horas da noite. De segunda-feira a sábado. Caso a escola atenda mais horários e
+            até mesmo no domingo, é possível criar novos horários. <br>
+            Na guia HORÁRIOS, selecione o dia da semana em que deseja criar o novo horário e
+            clique no botão <button class="btn btn-success text-ligh"><b>+</b> NOVO HORÁRIO</button>.  Caso deseje criar esse novo horário em todos os
+            dias da semana, será necessário fazer o mesmo procedimento em todos os dias. <br>
+            Ao clicar no botão + novo horário aparecerá a tela abaixo. Nela você deve colocar o
+            horário inicial e o horário final. Por exemplo, 07:00 como horário inicial e 08:00 como
+            horário final. E clicar no botão GRAVAR. <br>
+
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/manutencao/horario1.jpg" alt="Campo nome do aluno">
+            <br> <br>
+
+            Após gravar o horário ele virá para a tela de horários daquele dia com um X vermelho.
+            Isso significa que ele foi criado, porém ainda não está habilitado para ser inserido na
+            matricula do aluno. Clicando no x vermelho ele ficará verde, e estará habilitado para ser
+            inserido na matricula dos alunos. <br>
+
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/manutencao/horario2.jpg" alt="Campo nome do aluno">
+            <br> <br>
+        </p>
+        `, `
+            guia, aba, manutenção, manutencao, horários, horario, hor, novo
+        `,
+        ""
+    ],
+
+     //17
+     [`Tipos de marketing`,
+        `
+        <p class="mx-2">
+            Esta guia exibe o tipo do marketing que atingiu as matrículas: <br>
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/manutencao/tmark1.jpg" alt="Campo nome do aluno">
+            <br> <br>
+        </p>
+        `, `
+            guia, aba, manutenção, manutencao, marketing, mark, market
+        `,
+        ""
+    ],
+
+    //18
+    [`Plano de conta`,
+        `
+        <p class="mx-2">
+            A guia plano de contas faz parte de um manual secundário apenas sobre o uso do caixa
+            dentro do sistema. Em caso de dúvidas, o manual também se encontra disponível.
+        </p>
+        `, `
+            guia, aba, manutenção, manutencao, conta, contas, caixa
+        `,
+        ""
+    ],
+
+    //19
+    [`Motivo do cancelamento/finalização`,
+        `
+        <p class="mx-2">
+            Esta guia exibe o motivo do cancelamento ou da finalização das matrículas: <br>
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/manutencao/motcanc.jpg" alt="Campo nome do aluno">
+            <br> <br>
+        </p>
+        `, `
+            guia, aba, manutenção, manutencao, cancela, finaliza, cancelamento, finalização
+        `,
+        ""
+    ],
+
+    //20
+    [`Contas do caixa`,
+        `
+        <p class="mx-2">
+            A guia Contas do Caixa faz parte de um manual secundário apenas sobre o uso do caixa
+            dentro do sistema. Em caso de dúvidas, o manual também se encontra disponível.
+        </p>
+        `, `
+            guia, aba, manutenção, manutencao, conta, contas, caixa
+        `,
+        ""
+    ],
+
+    //21
+    [`Faixa etária`,
+        `
+        <p class="mx-2">
+            Essa guia demonstra a faixa etária dos alunos dos determinados tipos de curso que são
+            oferecidos na plataforma.
+
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/manutencao/faixaetaria.jpg" alt="Campo nome do aluno">
+            <br> <br>
+        </p>
+        `, `
+            guia, aba, manutenção, manutencao, idade, anos, etaria
+        `,
+        ""
+    ],
+
+    [`Telemarketing`,
+        `
+        <p class="mx-2">
+            Essa guia faz parte de um manual secundário que explica o uso dela separadamente. 
+        </p>
+        `, `
+            guia, aba, manutenção, manutencao, marketing, tele
         `,
         ""
     ],

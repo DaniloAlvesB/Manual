@@ -94,20 +94,22 @@ function render_list_content(){
             if(title1[i][2] == true){
                 list_content.innerHTML += `
                     <!-- ${title1[i][0].toUpperCase()} -->
-                    <p class="m-0">
-                        <div class="fs-2 m-0">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
-                                <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"></path>
-                            </svg>
-                            <a class="title-menual fs-5" data-bs-toggle="collapse" href="#${title1[i][1]}" role="button" aria-expanded="false" aria-controls="${title1[i][1]}">
-                                ${title1[i][0]}
-                            </a>
-                        </div>
-                    </p>
-                    <div class="row">
-                        <div class="col">
-                            <div id="${title1[i][1]}" class="collapse multi-collapse" style="margin-left: 2rem;">
-                                
+                    <div class="border border-dark border-opacity-25 py-2 bg-white-d">
+                        <p class="m-0">
+                            <div class="fs-2 m-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                                    <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"></path>
+                                </svg>
+                                <a class="title-menual fs-5" data-bs-toggle="collapse" href="#${title1[i][1]}" role="button" aria-expanded="false" aria-controls="${title1[i][1]}">
+                                    ${title1[i][0]}
+                                </a>
+                            </div>
+                        </p>
+                        <div class="row">
+                            <div class="col">
+                                <div id="${title1[i][1]}" class="collapse multi-collapse" style="padding-left: 2rem;">
+                                    
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -116,7 +118,7 @@ function render_list_content(){
                 for(var a = 1; a < title2.length; a++){
                     if(i == title2[a][3]){
                         document.getElementById(title1[i][1]).innerHTML += `
-                        <button class="card container-fluid p-2 text-center subtitle-manual" onclick="render_text_content_id(${title2[a][2]})">
+                        <button class="card container-fluid p-2 text-left subtitle-manual" onclick="render_text_content_id(${title2[a][2]})">
                             ${title2[a][0]}
                         </button>
                         `
@@ -125,16 +127,18 @@ function render_list_content(){
             }else{
                 list_content.innerHTML += `
                     <!-- ${title1[i][0].toUpperCase()} -->
-                    <p class="m-0">
-                        <div class="fs-2 m-0">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
-                                <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"></path>
-                            </svg>
-                            <a class="title-menual fs-5" data-bs-toggle="collapse" role="button" aria-expanded="false" onclick="render_text_content_id(${title1[i][3]})">
-                                ${title1[i][0]}
-                            </a>
-                        </div>
-                    </p>
+                    <div class="border border-dark border-opacity-25 py-2 bg-white-d">
+                        <p class="m-0">
+                            <div class="fs-2 m-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                                    <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"></path>
+                                </svg>
+                                <a class="title-menual fs-5" data-bs-toggle="collapse" role="button" aria-expanded="false" onclick="render_text_content_id(${title1[i][3]})">
+                                    ${title1[i][0]}
+                                </a>
+                            </div>
+                        </p>
+                    </div>
                 `
             }
         }
@@ -144,17 +148,19 @@ function render_list_content(){
             if(title1[i][2] == true){
                 list_content.innerHTML += `
                     <!-- ${title1[i][0].toUpperCase()} -->
-                    <p class="m-0">
-                        <div class="fs-2 m-0">
-                            <a class="title-menual fs-5" data-bs-toggle="collapse" href="#${title1[i][1]}" role="button" aria-expanded="false" aria-controls="${title1[i][1]}">
-                                ${i} - ${title1[i][0]}
-                            </a>
-                        </div>
-                    </p>
-                    <div class="row">
-                        <div class="col">
-                            <div id="${title1[i][1]}" class="" style="margin-left: 2rem;">
-                                
+                    <div class="py-2 bg-white-d">
+                        <p class="m-0">
+                            <div class="fs-2 m-0">
+                                <a class="title-menual fs-5" data-bs-toggle="collapse" href="#${title1[i][1]}" role="button" aria-expanded="false" aria-controls="${title1[i][1]}">
+                                    ${i} - ${title1[i][0]}
+                                </a>
+                            </div>
+                        </p>
+                        <div class="row">
+                            <div class="col">
+                                <div id="${title1[i][1]}" class="" style="margin-left: 2rem; padding-bottom: 1rem">
+                                    
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -174,13 +180,15 @@ function render_list_content(){
             }else{
                 list_content.innerHTML += `
                     <!-- ${title1[i][0].toUpperCase()} -->
-                    <p class="m-0">
-                        <div class="fs-2 m-0">
-                            <a class="title-menual fs-5" data-bs-toggle="collapse" role="button" aria-expanded="false" onclick="render_text_content_id(${title1[i][3]})">
-                                ${i} - ${title1[i][0]}
-                            </a>
-                        </div>
-                    </p>
+                    <div class="py-2 bg-white-d">
+                        <p class="m-0">
+                            <div class="fs-2 m-0">
+                                <a class="title-menual fs-5" data-bs-toggle="collapse" role="button" aria-expanded="false" onclick="render_text_content_id(${title1[i][3]})" style=" padding-bottom: 1rem">
+                                    ${i} - ${title1[i][0]}
+                                </a>
+                            </div>
+                        </p>
+                    </div>
                 `
             }
         }
