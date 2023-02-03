@@ -21,20 +21,69 @@ function reload_pag(){
 
 function pesquisar(){
 
-    var text = document.getElementById("pesquisa_text").value;
+    if(celular == false){
+        var text = document.getElementById("pesquisa_text").value;
 
-    list_content.innerHTML = "";
-    pesq_prep();
+        list_content.innerHTML = "";
+        pesq_prep();
 
-    for(var i = 1; i < content.length; i++){
+        for(var i = 1; i < content.length; i++){
 
-        if(content[i][0].toLowerCase().includes(text.toLowerCase()) || content[i][2].toLowerCase().includes(text.toLowerCase()) ){
-            list_content.innerHTML += `
-                <button class="card container-fluid p-1 text-left subtitle-manual" onclick="render_text_content_id(${i})">
-                    ${content[i][0]}
-                </button>
-            `
+            if(content[i][0].toLowerCase().includes(text.toLowerCase()) || content[i][2].toLowerCase().includes(text.toLowerCase()) ){
+                list_content.innerHTML += `
+                    <button class="card container-fluid p-1 text-left subtitle-manual" onclick="render_text_content_id(${i})">
+                        ${content[i][0]}
+                    </button>
+                `
+            }
+        }
+    }else{
+        var text = document.getElementById("pesquisa_text").value;
+        text_content.innerHTML = `
+            <h4>Exibindo resultados para "${text}"</h4>
+            <hr>
+        `
+        for(var i = 1; i < content.length; i++){
+
+            if(content[i][0].toLowerCase().includes(text.toLowerCase()) || content[i][2].toLowerCase().includes(text.toLowerCase()) ){
+                text_content.innerHTML += `
+                    <button class="card container-fluid p-1 text-left subtitle-manual" onclick="render_text_content_id(${i})">
+                        ${content[i][0]}
+                    </button>
+                `
+            }
         }
     }
 
+}
+
+function relacionados(id){
+    
+    if(id > 1){
+        relation_content.innerHTML += `
+            <div class="col-5 d-flex flex-column">
+                <h5>Tópico anterior</h5>
+                <hr>
+                <button class="card container-fluid p-1 text-left subtitle-manual" onclick="render_text_content_id(${id-1})">
+                    ${content[id-1][0]}
+                </button>
+            </div>
+
+            <div class="col-1"></div>
+        `
+    }
+
+    if(id < content.length){
+        relation_content.innerHTML += `
+            <div class="col-5 d-flex flex-column">
+                <button type="button" class="btn btn-light" onclick="render_text_content_id(${id+1})" style="min-width: 10vh;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+                        path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"></path>
+                    </svg>
+                    ${content[id+1][0]}
+                </button>
+            </div>
+        `
+    }
+    
 }

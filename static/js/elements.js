@@ -19,7 +19,7 @@ function render_list(){
         main_content.innerHTML = `
             <div class="col-12 col-md-4 rounded border border-opacity-50" style="max-height: 75vh; min-height: 75vh">
                 ${nav_list}
-                <div id="list_content" style="overflow-x: hidden; overflow-y: scroll; max-height: 68vh; min-height: 68vh"></div>
+                <div id="list_content" style="overflow-x: hidden; overflow-y: scroll; max-height: 65vh; min-height: 65vh"></div>
             </div>
             <div id="text_content" class="col-12 col-md-8 rounded p-2" style="overflow-x: hidden; overflow-y: scroll; max-height: 75vh">
                 <h3 class="m-2">Olá!</h3>
@@ -34,6 +34,45 @@ function render_list(){
             </div>
         `
 
+    }else{
+
+        header_content.innerHTML = `
+            <div class="dropdown">
+                <button class="btn btn-dark" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
+                    </svg>
+                </button>
+                <ul id="a" class="dropdown-menu p-3" aria-labelledby="dropdownMenuButton1">
+                    <h5>Pesquisa rapida<h5>
+                    <div class="input-group mb-3">
+                        <input id="pesquisa_text" type="text" class="form-control" placeholder="" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="pesquisar()">Pesquisar</button>
+                    </div>
+                    <hr>
+                    <div id="list_content" style="min-width: 40vh; overflow-x: hidden; overflow-y: scroll; max-height: 80vh">
+                    </div>
+                </ul>
+            </div>
+            <h3 class="mt-1">Manual Online - MSE</h3>
+            <div class="col-1">
+        `
+
+        main_content.innerHTML = `
+            <div class="container-fluid">
+                <div id="text_content" class="rounded p-0">
+                    <h3 class="m-2">Olá!</h3>
+                    <hr>
+                    <p class="mx-2">
+                        Neste manual você irá aprender a como realizar diversas funções que o nosso
+                        SISTEMA ESCOLA e o PORTAL DO ALUNO oferecem.
+                        Aprenderá também como proceder no seu primeiro acesso, o que é cada local de acesso,
+                        suas principais funcionalidades e recursos.<br>
+                        Espero que a nossa parceria seja de muito sucesso!
+                    </p>
+                </div>
+            </div>
+        `
     }
 }
 
@@ -49,56 +88,103 @@ function pesq_prep(){
 
 
 function render_list_content(){
-    list_content.innerHTML =  ""
-    for(var i = 1; i < title1.length; i++){
-        if(title1[i][2] == true){
-            list_content.innerHTML += `
-                <!-- ${title1[i][0].toUpperCase()} -->
-                <p class="m-0">
-                    <div class="fs-2 m-0">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
-                            <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"></path>
-                        </svg>
-                        <a class="title-menual fs-5" data-bs-toggle="collapse" href="#${title1[i][1]}" role="button" aria-expanded="false" aria-controls="${title1[i][1]}">
-                            ${title1[i][0]}
-                        </a>
-                    </div>
-                </p>
-                <div class="row">
-                    <div class="col">
-                        <div id="${title1[i][1]}" class="collapse multi-collapse" style="margin-left: 2rem;">
-                            
+    if(celular == false){
+        list_content.innerHTML =  ""
+        for(var i = 1; i < title1.length; i++){
+            if(title1[i][2] == true){
+                list_content.innerHTML += `
+                    <!-- ${title1[i][0].toUpperCase()} -->
+                    <p class="m-0">
+                        <div class="fs-2 m-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                                <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"></path>
+                            </svg>
+                            <a class="title-menual fs-5" data-bs-toggle="collapse" href="#${title1[i][1]}" role="button" aria-expanded="false" aria-controls="${title1[i][1]}">
+                                ${title1[i][0]}
+                            </a>
+                        </div>
+                    </p>
+                    <div class="row">
+                        <div class="col">
+                            <div id="${title1[i][1]}" class="collapse multi-collapse" style="margin-left: 2rem;">
+                                
+                            </div>
                         </div>
                     </div>
-                </div>
-            `
+                `
 
-            for(var a = 1; a < title2.length; a++){
-                if(i == title2[a][3]){
-                    document.getElementById(title1[i][1]).innerHTML += `
-                    <button class="card container-fluid p-2 text-center subtitle-manual" onclick="render_text_content_id(${title2[a][2]})">
-                        ${title2[a][0]}
-                    </button>
-                    `
+                for(var a = 1; a < title2.length; a++){
+                    if(i == title2[a][3]){
+                        document.getElementById(title1[i][1]).innerHTML += `
+                        <button class="card container-fluid p-2 text-center subtitle-manual" onclick="render_text_content_id(${title2[a][2]})">
+                            ${title2[a][0]}
+                        </button>
+                        `
+                    }
                 }
+            }else{
+                list_content.innerHTML += `
+                    <!-- ${title1[i][0].toUpperCase()} -->
+                    <p class="m-0">
+                        <div class="fs-2 m-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                                <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"></path>
+                            </svg>
+                            <a class="title-menual fs-5" data-bs-toggle="collapse" role="button" aria-expanded="false" onclick="render_text_content_id(${title1[i][3]})">
+                                ${title1[i][0]}
+                            </a>
+                        </div>
+                    </p>
+                `
             }
-        }else{
-            list_content.innerHTML += `
-                <!-- ${title1[i][0].toUpperCase()} -->
-                <p class="m-0">
-                    <div class="fs-2 m-0">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
-                            <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"></path>
-                        </svg>
-                        <a class="title-menual fs-5" data-bs-toggle="collapse" role="button" aria-expanded="false" onclick="render_text_content_id(${title1[i][3]})">
-                            ${title1[i][0]}
-                        </a>
+        }
+    }else{
+        list_content.innerHTML =  ""
+        for(var i = 1; i < title1.length; i++){
+            if(title1[i][2] == true){
+                list_content.innerHTML += `
+                    <!-- ${title1[i][0].toUpperCase()} -->
+                    <p class="m-0">
+                        <div class="fs-2 m-0">
+                            <a class="title-menual fs-5" data-bs-toggle="collapse" href="#${title1[i][1]}" role="button" aria-expanded="false" aria-controls="${title1[i][1]}">
+                                ${i} - ${title1[i][0]}
+                            </a>
+                        </div>
+                    </p>
+                    <div class="row">
+                        <div class="col">
+                            <div id="${title1[i][1]}" class="" style="margin-left: 2rem;">
+                                
+                            </div>
+                        </div>
                     </div>
-                </p>
-            `
+                `
+
+                let cont = 0;
+                for(var a = 1; a < title2.length; a++){
+                    if(i == title2[a][3]){
+                        cont++
+                        document.getElementById(title1[i][1]).innerHTML += `
+                        <button class="card container-fluid p-2 text-center subtitle-manual" onclick="render_text_content_id(${title2[a][2]})">
+                        ${i}.${cont} - ${title2[a][0]}
+                        </button>
+                        `
+                    }
+                }
+            }else{
+                list_content.innerHTML += `
+                    <!-- ${title1[i][0].toUpperCase()} -->
+                    <p class="m-0">
+                        <div class="fs-2 m-0">
+                            <a class="title-menual fs-5" data-bs-toggle="collapse" role="button" aria-expanded="false" onclick="render_text_content_id(${title1[i][3]})">
+                                ${i} - ${title1[i][0]}
+                            </a>
+                        </div>
+                    </p>
+                `
+            }
         }
     }
-
 }
 
 function render_text_content(text, list){
@@ -117,12 +203,21 @@ function render_text_content(text, list){
             `
         }
     }
+
+    text_content.innerHTML += `
+        <div id="sugestoes">
+            <h4>Relacionados</h4>
+            <hr>
+        </div>
+    `
 }
 
 function render_text_content_id(id){
     if(content[id][3] != ""){
         text_content.innerHTML = `
-            <h4 class="mx-3">${content[id][0]}</h4>
+            <div class="d-flex flex-row">
+                <h4 class="col mx-3">${content[id][0]}</h4>
+            </div>
             <hr>
             <a href="${content[id][3]}" type="button" class="btn btn-primary mb-3" target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-btn-fill" viewBox="0 0 16 16">
@@ -134,11 +229,19 @@ function render_text_content_id(id){
         `
     }else{
         text_content.innerHTML = `
-            <h4 class="mx-3">${content[id][0]}</h4>
+            <div class="d-flex flex-row text-center justify-content-between">
+                <h4 class="mx-3">${content[id][0]}</h4>
+            </div>
             <hr>
             ${content[id][1]}
         `
     }
+
+    text_content.innerHTML += `
+        <div id="content">
+
+        </div>
+    `
 }
 
 // RENDER
