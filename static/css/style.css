@@ -1,3 +1,18 @@
+#header_content{
+    z-index: 1;
+    display:block;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:rgba(132, 185, 231, 0.9);
+    text-align:center;
+  }
+  
+  #header_content:hover{
+    background: rgb(103, 160, 211);
+  }
+
 div::-webkit-scrollbar {
     width: 12px;               /* width of the entire scrollbar */
 }

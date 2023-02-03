@@ -80,7 +80,7 @@ let content = [
     `, `
         Primeiro Acesso, Sistema Escola, Abrir
     `,
-        `http://www.videostutoriais.grupooportunidade.com.br/suporte/videos/sistema/ACESSANDO%20O%20SISTEMA%20ESCOLA.mp4`
+        `https://www.videostutoriais.grupooportunidade.com.br/suporte/videos/sistema/ACESSANDO%20O%20SISTEMA%20ESCOLA.mp4`
     ],
 
     //2

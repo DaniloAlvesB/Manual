@@ -70,6 +70,19 @@ function render_list(){
                         suas principais funcionalidades e recursos.<br>
                         Espero que a nossa parceria seja de muito sucesso!
                     </p>
+
+                    <hr>
+                    <h3 class="m-2">Tópicos iniciais</h3>
+                        
+                    <button class="card container-fluid p-2 text-left subtitle-manual" onclick="render_text_content_id(${title2[1][2]})">
+                        ${title2[1][0]}
+                    </button>
+                    <button class="card container-fluid p-2 text-left subtitle-manual" onclick="render_text_content_id(${title2[2][2]})">
+                        ${title2[2][0]}
+                    </button>
+                    <button class="card container-fluid p-2 text-left subtitle-manual" onclick="render_text_content_id(${title2[3][2]})">
+                        ${title2[3][0]}
+                    </button>
                 </div>
             </div>
         `
@@ -85,7 +98,6 @@ function pesq_prep(){
     </div>
     `;
 }
-
 
 function render_list_content(){
     if(celular == false){
@@ -236,15 +248,16 @@ function render_text_content_id(id){
                 Vídeo explicativo
             </a>
             ${content[id][1]}
+            <!-- 
             <hr>
             <div class="d-flex flex-row">
                 <h5>Vídeo explicativo: </h5>
                 <span class="p-1">${content[id][0]}</span>
             </div>
             
-            <div id="${content[id][0]}_video" class="ratio ratio-16x9">
+           <div id="${content[id][0]}_video" class="ratio ratio-16x9">
                 <iframe src="${content[id][3]}" title="YouTube video" allowfullscreen></iframe>
-            </div>
+            </div> -->
         `
     }else{
         text_content.innerHTML = `
