@@ -246,4 +246,5 @@ function render_text_content_id(id){
 
 // RENDER
 render_list()
+render_list()
 render_list_content();
