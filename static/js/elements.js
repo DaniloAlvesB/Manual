@@ -227,13 +227,18 @@ function render_text_content_id(id){
                 <h4 class="col mx-3">${content[id][0]}</h4>
             </div>
             <hr>
-            <a href="${content[id][3]}" type="button" class="btn btn-primary mb-3" target="_blank">
+            <a href="#${content[id][0]}_video" class="btn btn-primary mb-3">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-btn-fill" viewBox="0 0 16 16">
                     <path d="M0 12V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm6.79-6.907A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"></path>
                 </svg>
                 Vídeo explicativo
             </a>
             ${content[id][1]}
+            <hr>
+            <h5>Vídeo explicativo:</h5>
+            <div id="${content[id][0]}_video" class="ratio ratio-16x9">
+                <iframe src="${content[id][3]}" title="YouTube video" allowfullscreen></iframe>
+            </div>
         `
     }else{
         text_content.innerHTML = `
