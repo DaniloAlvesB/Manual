@@ -221,6 +221,8 @@ function render_text_content(text, list){
 }
 
 function render_text_content_id(id){
+    var myDiv = document.getElementById('text_content');
+    myDiv.scrollTop = 0;
     if(content[id][3] != ""){
         text_content.innerHTML = `
             <div class="d-flex flex-row">
@@ -235,7 +237,11 @@ function render_text_content_id(id){
             </a>
             ${content[id][1]}
             <hr>
-            <h5>Vídeo explicativo:</h5>
+            <div class="d-flex flex-row">
+                <h5>Vídeo explicativo: </h5>
+                <span class="p-1">${content[id][0]}</span>
+            </div>
+            
             <div id="${content[id][0]}_video" class="ratio ratio-16x9">
                 <iframe src="${content[id][3]}" title="YouTube video" allowfullscreen></iframe>
             </div>
