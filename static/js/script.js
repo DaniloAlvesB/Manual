@@ -27,14 +27,34 @@ function pesquisar(){
         list_content.innerHTML = "";
         pesq_prep();
 
-        for(var i = 1; i < content.length; i++){
+        for(var i = 1; i < title2.length; i++){
 
-            if(content[i][0].toLowerCase().includes(text.toLowerCase()) || content[i][2].toLowerCase().includes(text.toLowerCase()) ){
-                list_content.innerHTML += `
-                    <button class="card container-fluid p-1 text-left subtitle-manual" onclick="render_text_content_id(${i})">
-                        ${content[i][0]}
-                    </button>
-                `
+            //Content
+            var rel = ""
+            if(title2[i][2] != 0){
+                rel = content[title2[i][2]][2];
+            }
+
+            //Main title
+            var main = "";
+            if(title2[i][3] != 0){
+                main = title1[title2[i][3]][0];
+            }
+
+            if(title2[i][0].toLowerCase().includes(text.toLowerCase()) || rel.toLowerCase().includes(text.toLowerCase()) ){
+                if(main != ""){
+                    list_content.innerHTML += `
+                        <button class="card container-fluid p-1 text-left subtitle-manual" onclick="render_text_content_id(${i})">
+                        ${main} >  <span class="fs-5" > ${title2[i][0]}</span>
+                        </button>
+                    `
+                }else{
+                    list_content.innerHTML += `
+                        <button class="card container-fluid p-1 text-left subtitle-manual" onclick="render_text_content_id(${i})">
+                        <span class="fs-5" > ${title2[i][0]}</span>
+                        </button>
+                    `
+                }
             }
         }
     }else{
@@ -43,14 +63,36 @@ function pesquisar(){
             <h4>Exibindo resultados para "${text}"</h4>
             <hr>
         `
-        for(var i = 1; i < content.length; i++){
+        for(var i = 1; i < title2.length; i++){
 
-            if(content[i][0].toLowerCase().includes(text.toLowerCase()) || content[i][2].toLowerCase().includes(text.toLowerCase()) ){
-                text_content.innerHTML += `
-                    <button class="card container-fluid p-1 text-left subtitle-manual" onclick="render_text_content_id(${i})">
-                        ${content[i][0]}
-                    </button>
-                `
+            //Content
+            var act = title2[i][2]
+            var rel = ""
+            if(act != 0){
+                rel = content[act][2];
+            }
+
+            //Main title
+            act = title2[i][3]
+            var main = "";
+            if(act != 0){
+                main = title1[act][0];
+            }
+
+            if(title2[i][0].toLowerCase().includes(text.toLowerCase()) || rel.toLowerCase().includes(text.toLowerCase()) ){
+                if(main != ""){
+                    text_content.innerHTML += `
+                        <button class="card container-fluid p-1 text-left subtitle-manual" onclick="render_text_content_id(${i})">
+                        ${main} >  <b class="fs-5" > ${title2[i][0]}</b>
+                        </button>
+                    `
+                }else{
+                    text_content.innerHTML += `
+                        <button class="card container-fluid p-1 text-left subtitle-manual" onclick="render_text_content_id(${i})">
+                        <b class="fs-5" > ${title2[i][0]}</b>
+                        </button>
+                    `
+                }
             }
         }
     }

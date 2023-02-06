@@ -25,6 +25,12 @@ let title2 = [
     ["Sistema Escola", "sistemaescola_primeiroacesso", 1, 1],
     ["Portal do Aluno", "portaldoaluno_primeiroacesso", 2, 1],
 
+    //Title - 2
+    ["Abertura de caixa", 'aberturacaixa', 0, 0],
+
+    //Title - 3
+    ["Cadatro de aluno", 'aberturacaixa', 0, 0],
+
 
     //Title - 4
     ["Sobre a matrícula", "sobrematricula_matriculaluno", 5, 4],
@@ -34,6 +40,9 @@ let title2 = [
     //Title -5
     ["Acessando o Portal do Aluno", "acessandoportal_acessando", 8, 5],
     ["Tela Inicial do Portal do Aluno", "acessandoportal_telainicial", 9, 5],
+
+    //Title - 6 
+    ["Alterando aula e status do curso", 'altnumaulastatuscurso', 0, 0],
 
     //MANUTENÇÃO
     //Title - 7
@@ -68,14 +77,20 @@ let title2 = [
     //RELATÓRIOS
     //Title - 9
     ["Sobre a guia Relatórios", "rel_sobre", 35, 9],
-    ["Alunos", "mov_cancmatri", 36, 9],
-    ["Matrículas", "mov_reatmatri", 37, 9],
-    ["Cursos", "mov_finalizamatri", 38, 9],
-    ["Plano de contas", "mov_trancamatri", 39, 9],
-    ["Quadro de horário", "mov_quitarparc", 40, 9],
-    ["Grade de horários", "mov_contascaixa", 41, 9],
-    ["Alunos ON/OFF-LINE", "mov_lancafreq", 42, 9],
-    ["Boletim alunos", "mov_lancarepos", 43, 9],
+    ["Alunos", "rel_cancmatri", 36, 9],
+    ["Matrículas", "rel_matri", 37, 9],
+    ["Cursos", "rel_curso", 38, 9],
+    ["Plano de contas", "rel_planoc", 39, 9],
+    ["Quadro de horário", "rel_quadroh", 40, 9],
+    ["Grade de horários", "rel_gradeh", 41, 9],
+    ["Alunos ON/OFF-LINE", "rel_onoff", 42, 9],
+    ["Boletim alunos", "rel_boletim", 43, 9],
+
+    //OUTRAS OPÇÕES
+    //Title - 10
+    ["Sobre a guia Outras Opções", "op_sobre", 44, 10],
+    ["Perfil", "op_perfil", 45, 10],
+    ["Parâmetros", "op_para", 46, 10],
 
 ]
 
@@ -992,13 +1007,13 @@ let content = [
             <br> <br>
         </p>
         `, `
-            guia, aba, 
+            guia, aba,  relatórios, relatorios
         `,
         ""
     ],
 
     //36
-    [`Sobre a guia Relatórios`,
+    [`Alunos`,
         `
         <p class="mx-2">
             Na guia alunos são encontrados relatórios referentes aos cadastros dos alunos. Eles são
@@ -1021,15 +1036,21 @@ let content = [
                 <li>Selecione através do menu ou digite um período para busca (esse filtro busca as
                 frequências registradas entre as datas selecionadas):</li>
                 
-                
+                <br>
+                <img class="img-fluid my-2 img-exp" src="static/images/relatorios/rel_alunos2.jpg" alt="">
+                <br> <br>
 
                 <li>Selecione o status das matrículas que deseja filtrar:</li>
 
-
+                <br>
+                <img class="img-fluid my-2 img-exp" src="static/images/relatorios/rel_alunos3.jpg" alt="">
+                <br> <br>
 
                 <li>Selecione o status de presença das frequências que deseja buscar e clique em Filtrar:</li>
 
-
+                <br>
+                <img class="img-fluid my-2 img-exp" src="static/images/relatorios/rel_alunos4.jpg" alt="">
+                <br> <br>
 
                 <li>O botão de busca retornará os dados das frequências registradas correspondentes aos
                 filtros aplicados, exibindo as seguintes colunas: Data da frequência, Número da
@@ -1040,70 +1061,532 @@ let content = [
                 antigas. Clicando na guia da coluna data esses valores podem ser reordenados para
                 ordem inversa:</li>
 
-
+                <br>
+                <img class="img-fluid my-2 img-exp" src="static/images/relatorios/rel_alunos5.jpg" alt="">
+                <br> <br>
 
                 <li>A busca vai retornar os resultados dos filtros aplicados. Você pode gerar um arquivo
                 PDF ou Planilha do Excel para visualização e impressão dos dados.</li>
                 
-
+                <br>
+                <img class="img-fluid my-2 img-exp" src="static/images/relatorios/rel_alunos6.jpg" alt="">
+                <br> <br>
 
                 <li>Ativar permissão do Relatório de Frequências ao perfil/usuário</li>
                 <li>Acesse o menu Outras Opções > Perfis:</li>
 
-
+                <br>
+                <img class="img-fluid my-2 img-exp" src="static/images/relatorios/rel_alunos7.jpg" alt="">
+                <br> <br>
 
                 <li>Em Perfis Cadastrados selecione o perfil que deseja atribuir a permissão:</li>
 
-
+                <br>
+                <img class="img-fluid my-2 img-exp" src="static/images/relatorios/rel_alunos8.jpg" alt="">
+                <br> <br>
 
                 <li>Em Controle de Perfil, desça a barra de rolagem até o menu Relatórios > Alunos >
                 Frequência. Note que a princípio o acesso desse relatório vai estar como NEGADO por
                 padrão:</li>
 
-
+                <br>
+                <img class="img-fluid my-2 img-exp" src="static/images/relatorios/rel_alunos9.jpg" alt="">
+                <br> <br>
 
                 <li>De um clique sobre a opção negado e um menu com as opções de acesso será exibido.
                 Selecione a permissão desejada com um clique:</li>
 
-
+                <br>
+                <img class="img-fluid my-2 img-exp" src="static/images/relatorios/rel_alunos10.jpg" alt="">
+                <br> <br>
 
                 <li>No menu de Perfis Cadastrados selecione a opção GRAVAR para salvar as alterações
                 realizadas:</li>
                 
-
+                <br>
+                <img class="img-fluid my-2 img-exp" src="static/images/relatorios/rel_alunos11.jpg" alt="">
+                <br> <br>
                 
                 Obs.: O caminho de acesso ao relatório só será exibido para usuários com as devidas
                 permissões de acesso definidas. Caso a atribuição de permissão seja definida ao próprio
                 usuário logado em uma seção, é necessário que o mesmo encerre sua seção e realize o
                 Login novamente para que as configurações sejam aplicadas ao seu.
 
-                <li>Faltantes: É possível filtrar por período e por quantidade de faltas consecutivas.</li>
-                <li>Inadimplentes: alunos com mensalidades em aberto</li>
-                <li>A terminar: alunos que estão com o contrato próximo do término</li>
-                <li>Terminaram: Alunos que estão com a matrícula finalizada.</li>
-                <li>Parcelas a receber: É possível filtrar por período, pelo status da matrícula e
+                <li><b>Faltantes:</b> É possível filtrar por período e por quantidade de faltas consecutivas.</li>
+                <li><b>Inadimplentes:</b> alunos com mensalidades em aberto</li>
+                <li><b>A terminar:</b> alunos que estão com o contrato próximo do término</li>
+                <li><b>Terminaram:</b> Alunos que estão com a matrícula finalizada.</li>
+                <li><b>Parcelas a receber:</b> É possível filtrar por período, pelo status da matrícula e
                 também definir uma data limite de pagamento, para que mostre as parcelas com
                 e sem desconto de pontualidade.</li>
-                <li>Parcelas Recebidas: É possível filtrar por período e pelo status da matrícula, as
+                <li><b>Parcelas Recebidas:</b> É possível filtrar por período e pelo status da matrícula, as
                 parcelas recebidas.</li>
-                <li>Não matriculados: Alunos que tem o cadastro feito, mas sem matricula.</li>
-                <li>Acompanhar aluno: Neste relatório é possível saber quais alunos estão
+                <li><b>Não matriculados:</b> Alunos que tem o cadastro feito, mas sem matricula.</li>
+                <li><b>Acompanhar aluno:</b> Neste relatório é possível saber quais alunos estão
                 atrasados ou adiantados nos cursos.</li>
-                <li>Acompanhar alunos por módulos: Este relatório possibilita acompanhar os
+                <li><b>Acompanhar alunos por módulos:</b> Este relatório possibilita acompanhar os
                 alunos adiantados ou atrasados diferenciando por módulos.</li>
-                <li>Perfil Aluno: Neste relatório será possível ver quais foram as respostas dadas
+                <li><b>Perfil Aluno:</b> Neste relatório será possível ver quais foram as respostas dadas
                 pelos alunos no questionário inicial do portal do Aluno. </li>
             </ul>
 
             <br>
-            <img class="img-fluid my-2 img-exp" src="static/images/relatorios/rel_sobre.jpg" alt="">
+            <img class="img-fluid my-2 img-exp" src="static/images/relatorios/rel_alunos12.jpg" alt="">
             <br> <br>
         </p>
         `, `
-            guia, aba, 
+            guia, aba, relatorio, relatorios, relatório, relatórios, aluno, alunos, anoversario, aniverário, frequencias, frequências, faltas, faltantes, inadimplencia, inadimplentes, terminar, terminaram, parcelas, receber, recebidas, acompanhar, módulos, modulos, perfil
         `,
         ""
     ],
+
+    //37
+    [`Matrículas`,
+        `
+        <p class="mx-2">
+            Na guia de matrículas será possível retirar relatórios referentes apenas às matriculas dos
+            alunos. <br>
+            Dentre os relatórios estão: <br>
+            <ul>
+                <li><b>Curso matrícula:</b> Com este relatório você consegue puxar as matrículas por
+                curso. Lembrando que curso é o avulso e módulo é o agrupamento de cursos.
+                <li><b>Efetuadas:</b> Este relatório possibilita saber quais matriculas foram feitas naquele
+                dia, mês atual ou meses anteriores.
+                <li><b>Canc./trancadas:</b> Este relatório possibilita saber quais matriculas foram
+                canceladas naquele dia, mês atual ou meses anteriores.
+                <li><b>Ativas:</b> Este relatório mostra as matriculas ativas atualmente.
+                <li><b>Por marketing:</b> Ex: Telemarketing, Mala Direta, Espontâneo e etc.
+                <li><b>Por funcionário:</b> Mostra as matrículas feitas pelo funcionário escolhido no filtro,
+                por período e ano.
+                <li><b>Apostilas não entregues:</b> Este relatório possibilita saber quais matriculas
+                precisarão de entrega de apostilas futuramente.
+                <li><b>Prosp. Compra Apos.:</b> Este relatório demonstra as apostilas que precisam ser
+                compradas e também filtra por apostila FÍSICA ou DIGITAL.
+                <li><b>Apostilas entregues:</b> Este relatório demonstra as apostilas que foram entregues,
+                em determinado período, de um determinado curso. É possível filtrar para ver
+                somente as físicas ou só digitais.
+                <li><b>Média por Matrícula:</b> Esse relatório mostra a média atual do curso em
+                andamento, na ordem 1 da matrícula do aluno.
+                <li><b>Relatório ANALÍTICO:</b> Permite gerar um relatório com filtros personalizados,
+                de acordo com as opções disponíveis.
+                <li><b>Relatório ONLINE:</b> Permite gerar um relatório somente com os alunos que tem
+                a opção ONLINE selecionada na matrícula.
+            </ul>
+
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/relatorios/rel_matri.jpg" alt="">
+            <br> <br>
+        </p>
+        `, `
+            guia, aba, matrículas, matriculas, cursos, efetuadas, feitas, canceladas, trancadas, marketing, entregues, pospectos, compras, entregues, médias, medias, analíticos, analiticos, onlines, on-lines
+        `,
+        ""
+    ],
+
+    //38
+    [`Cursos`,
+        `
+        <p class="mx-2">
+            Nessa guia é possível verificar qual o saldo atual de apostilas dentro do sistema escola.
+            É possível retirar o relatório com apostilas zeradas ou não, e também filtrar por apostilas
+            físicas ou digitais. É possível também gerar o relatório (PDF, Excel).
+
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/relatorios/rel_cur1.jpg" alt="">
+            <br> <br>
+
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/relatorios/rel_cur2.jpg" alt="">
+            <br> <br>
+        </p>
+        `, `
+            guia, aba, cursos, apostilas
+        `,
+        ""
+    ],
+
+    //39
+    [`Plano de contas`,
+        `
+        <p class="mx-2">
+            A guia plano de contas faz parte de um manual secundário apenas sobre o uso do caixa
+            dentro do sistema. Em caso de dúvidas, o manual também está disponível.
+        </p>
+        `, `
+            guia, aba, plano de contas
+        `,
+        ""
+    ],
+    
+    //40
+    [`Quadro de horários`,
+        `
+        <p class="mx-2">
+            O relatório de grade de horário permite que seja retirado um relatório com todas as
+            informações referentes ao dia da semana, faixa etária, módulo, curso e laboratório que
+            tem horários agendados. <br>
+            Existem filtros que permitem um relatório mais preciso dependendo do tipo de
+            informação que deseja. É possível retirá-lo em PDF ou em forma de planilha do Excel. <br>
+
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/relatorios/rel_quadro.jpg" alt="">
+            <br> <br>
+        </p>
+        `, `
+            guia, aba, horários, horarios, quadros
+        `,
+        ""
+    ],
+
+    //41
+    [`Grade de horários`,
+        `
+        <p class="mx-2">
+            O relatório de grade de horário traz informações a respeito dos horários agendados no
+            dia atual ou no dia que for escolhido. Ele traz em verde os alunos que tem horários
+            agendados e em vermelho os alunos que tem reposição agendada, além do número de
+            alunos agendados e o total de horários ainda disponíveis. <br>
+
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/relatorios/rel_grade.jpg" alt="">
+            <br> <br>
+        </p>
+        `, `
+            guia, aba, horários, horarios, grades
+        `,
+        ""
+    ],
+
+    //42
+    [`Alunos ON/OFF-LINE`,
+        `
+        <p class="mx-2">
+            Esse relatório exibe em tempo real, os alunos que estão agendados nos respectivos
+            horários cadastrados no sistema escola. Assim que o aluno logar com sua matrícula no
+            Portal do Aluno, o relatório mostrará um monitor com a mensagem de ON (on-line), e
+            se o aluno não logar o mesmo mostrará como OFF (off-line). <br>
+
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/relatorios/rel_onoff.jpg" alt="">
+            <br> <br>
+        </p>
+        `, `
+            guia, aba, horários, horarios, grades
+        `,
+        ""
+    ],
+
+    //43
+    [`Boletim Alunos`,
+        `
+        <p class="mx-2">
+            Essa opção do relatório permite a geração do boletim do aluno. Contendo várias
+            informações. Sendo possível imprimi-lo em PDF. <br>
+            Ao clicar na guia de Boletim, será aberto uma nova aba do navegador. Para puxar o
+            relatório do aluno basta colocar o nome dele e em seguida dar ok. <br>
+
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/relatorios/rel_boletim.jpg" alt="">
+            <br> <br>
+
+            Dentro do boletim do aluno, existem algumas opções que podem ser impressas.
+            Poderão ser tiradas as informações de: <br>
+            <ul>
+                <li>Nota dos alunos: Nessa opção além da nota do aluno também é possível
+                visualizar os dias em que essas notas foram alcançadas.</li>
+                <li>Frequências</li>
+                <li>Sugestões dos alunos para o curso, sistema.</li>
+                <li>Comentários</li>
+                <li>Alterar aluno: Caso queira trocar o aluno para ver o boletim, esse botão te dá
+                essa opção;</li>
+            <ul>
+
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/relatorios/rel_boletim2.jpg" alt="">
+            <br> <br>
+
+        </p>
+        `, `
+            guia, aba, horários, horarios, grades
+        `,
+        ""
+    ],
+
+    //OUTRAS OPÇÕES
+    //44
+    [`Sobre a guia Outras Opções`,
+        `
+        <p class="mx-2">
+            Nessa guia temos 2 Subguias: Perfis e Parâmetros. <br>
+    
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/outrasopcoes/oo_sobre.jpg" alt="">
+            <br> <br>
+
+            Mais abaixo vamos falar separadamente de cada uma delas 
+        </p>
+        `, `
+            guia, aba, outras opcoes, opçoes, parâmetros, paramentros, perfis, perfil
+        `,
+        ""
+    ],
+
+    //45
+    [`Perfil`,
+        `
+        <p class="mx-2">
+            Na guia perfil poderemos criar outros perfis para o sistema escola, dando níveis
+            diferentes de permissões, para depois selecionarmos nos logins de cada funcionário
+            criado. <br>
+            Antes de criarmos novos perfis gostaríamos de salientar a importância de NÃO
+            ALTERAR o perfil ADMIN. O perfil Admin é o principal, e por isso contém todas as
+            permissões do sistema. Alterando ele será necessário um reset do sistema para que seja
+            possível retornar todas as permissões deste perfil. <br>
+            Para criar novos perfis basta clicar no botão + NOVO. Este botão permitirá a criação de
+            um novo perfil com o nome que você desejar. Inicialmente coloca-se o nome e depois
+            limita-se as permissões. <br>
+            Do lado esquerdo temos todas as guias do sistema e suas subguias. No grau de
+            permissões temos 4 níveis: <br>
+            <ul>
+                <li><b>3 - Excluir:</b> Esse nível de permissão permite que o funcionário com essa
+                permissão consiga fazer qualquer tipo de movimentação dentro do sistema.
+                Desde incluir até excluir informações.</li>
+                <li><b>2 - Edição (Leitura/Escrita):</b> Neste nível o funcionário poderá editar as
+                informações de dentro do sistema, mas não poderá excluí-las.</li>
+                <li><b>1 - Leitura:</b> Neste caso o funcionário só poderá ler as informações do sistema,
+                mas não conseguirá fazer nenhum tipo de alteração</li>
+                <li><b>0 - Negado:</b> Com esse nível de permissão a guia selecionada não ficará visível
+            para o funcionário. </li>
+            </ul>
+            As permissões devem ser dadas de acordo com o perfil criado e com o funcionário que
+            terá esse perfil atrelado ao seu Login, variando de acordo com a necessidade da sua
+            escola. <br>
+            Depois de colocar todas as permissões o botão GRAVAR ficará ativo, basta clicar nele
+            para concluir a criação do novo perfil. <br>
+
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/outrasopcoes/oo_perfil.jpg" alt="">
+            <br> <br>
+
+        </p>
+        `, `
+            guia, aba, outras opcoes, opçoes, perfis, perfil, permissões, permissoes, permissão, permissao
+        `,
+        ""
+    ],
+
+     //45
+     [`Parâmetros`,
+     `
+     <p class="mx-2">
+        A guia parâmetros traz informações a respeito da parte gerencial da escola. Nessa guia
+        informações como descontos de pagamento para alunos, nome da escola, CNPJ,
+        endereço, senha do instrutor, entre outras, podem ser configuradas. <br>
+
+        <br>
+        <img class="img-fluid my-2 img-exp" src="static/images/outrasopcoes/oo_par1.jpg" alt="">
+        <br> <br>
+
+        Na guia parâmetros encontramos outras 6 subguias: <br>
+        <ul>
+            <li><b>GERAIS:</b> Nessa guia poderão ser colocadas informações como:</li>
+            <ul>
+                <li>Juros diários cobrados nas parcelas em atraso;</li>
+                <li>Valor cobrado do aluno para cada curso extra;</li>
+                <li>Solicita finalização de curso ao abrir o caixa?;</li>
+                <li>Senha do gerente;</li>
+                <li>Desconto cartão à vista;</li>
+            </ul>
+
+            Entre outras informações. Todas que estiverem com o * são de preenchimento
+            obrigatório. <br>
+
+            <li><b>EMPRESA:</b> as informações colocadas nessa guia aparecerão no carnê simples
+            do sistema. Caso não seja preenchida essas informações, no carnê sairá apenas
+            xxxxxxxx ao invés das informações da escola. Também será possível inserir no
+            sistema seu próprio contrato (ou visualizar o contrato que vai pré-definido com o
+            sistema) e a imagem da logo da sua unidade.</li>
+            
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/outrasopcoes/oo_par2.jpg" alt="">
+            <br> <br>
+
+            <li><b>PORTAL DO ALUNO:</b> Todas as funcionalidades descritas a seguir são opcionais,
+            basta acessar o Sistema Escola em Outras Opções > Parâmetros > Portal do Aluno.</li>
+
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/outrasopcoes/oo_par4.jpg" alt="">
+            <br> <br>
+
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/outrasopcoes/oo_par5.jpg" alt="">
+            <br> <br>
+
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/outrasopcoes/oo_par3.jpg" alt="">
+            <br> <br>
+
+            <i>Obs.: Para acessar a aba Parâmetros, o usuário logado deve ter a devida permissão definida
+            em seu perfil.</i><br>
+
+            <ul>
+                <li><b>Função - Bloqueio ao Concluir Curso</b><br>
+                    Quando ativo, solicita a senha do funcionário na primeira aula de cada
+                    curso, caso seja necessário a aplicação de avaliação antes do início do
+                    próximo curso.
+                
+                    <br>
+                    <img class="img-fluid my-2 img-exp" src="static/images/outrasopcoes/oo_par6.jpg" alt="">
+                    <br> <br>
+                    
+                    <br>
+                    <img class="img-fluid my-2 img-exp" src="static/images/outrasopcoes/oo_par7.jpg" alt="">
+                    <br> <br>
+                </li>
+
+                <li><b>Função - Exibir Mensagem Parabéns</b>
+                    Quanto ativo, exibe uma mensagem padronizada de felicitações exibida ao aluno no dia do seu
+                    aniversário.
+
+                    <br>
+                    <img class="img-fluid my-2 img-exp" src="static/images/outrasopcoes/oo_par8.jpg" alt="">
+                    <br> <br>
+                    
+                    <br>
+                    <img class="img-fluid my-2 img-exp" src="static/images/outrasopcoes/oo_par9.jpg" alt="">
+                    <br> <br>
+                </li>
+
+                <li><b>Função - Questionário Perfil do Aluno</b>
+                    Questionário de perfil solicitado ao aluno em seu primeiro acesso ao Portal do Aluno.
+                    Futuramente, esses dados poderão ser filtrados no Sistema Escola e usados para
+                    análises de perfil de aluno, trabalhando mais próximo ao aluno e assim o fidelizando
+                    muito melhor com base em suas preferências.
+
+                    <br>
+                    <img class="img-fluid my-2 img-exp" src="static/images/outrasopcoes/oo_par10.jpg" alt="">
+                    <br> <br>
+
+                    <br>
+                    <img class="img-fluid my-2 img-exp" src="static/images/outrasopcoes/oo_par11.jpg" alt="">
+                    <br> <br>
+
+                    Uma vez preenchido, o perfil fica registrado no sistema e pode ser acessado/editado dentro do
+                    Portal do Aluno.
+
+                    <br>
+                    <img class="img-fluid my-2 img-exp" src="static/images/outrasopcoes/oo_par12.jpg" alt="">
+                    <br> <br>
+                </li>
+
+                <li><b>Função - Exibir Mensagem de Aula Grátis</b>
+                    Mensagem personalizada exibida 4 aulas antes do término de cada curso.
+                    Considerando os interesses do aluno e suas intenções após finalizar o curso, essa
+                    opção permite oferecer uma aula grátis para que o aluno conheça outros cursos e
+                    pacotes da unidade, aumentando as chances do aluno se sentir ainda mais interessado
+                    em continuar fazendo uso da plataforma. <b>Caso queira desabilitar essa função, basta
+                    apagar o texto do campo Mensagem Aula Grátis</b>.
+
+                    <br>
+                    <img class="img-fluid my-2 img-exp" src="static/images/outrasopcoes/oo_par13.jpg" alt="">
+                    <br> <br>
+
+                    <br>
+                    <img class="img-fluid my-2 img-exp" src="static/images/outrasopcoes/oo_par14.jpg" alt="">
+                    <br> <br>
+                <li>
+
+                <li><b>Função - Exibir Mensagem de Prêmio</b>
+                    Quando ativa, uma mensagem personalizada é exibida quando o aluno atingir 50% de
+                    cada curso. As definições dos prêmios ficam a critério da unidade e podem ser coisas
+                    simples, mas que já fazem grande diferença no sentido de cativar o aluno. O aluno
+                    recebe um agradecimento ou uma mensagem de reconhecimento da escola pois já está
+                    na metade do curso, gerando assim um incentivo para o aluno, aumentando as
+                    chances de fidelização.
+
+                    <br>
+                    <img class="img-fluid my-2 img-exp" src="static/images/outrasopcoes/oo_par15.jpg" alt="">
+                    <br> <br>
+
+                    <br>
+                    <img class="img-fluid my-2 img-exp" src="static/images/outrasopcoes/oo_par16.jpg" alt="">
+                    <br> <br>
+                </li>
+
+                <li><b>Função - Plano de Fundo Personalizado</b>
+                    Possibilita ao cliente definir o plano de fundo da tela de login do Portal do Aluno. Basta
+                    definir a URL desejada para que os alunos acessem ao portal a partir dela e, em
+                    seguida, definir a URL correspondente a imagem escolhida de acordo com o
+                    dimensionamento especificado (Navegador, tablet e celular). <b>Lembre-se de que o
+                    campo de URL não deve conter caracteres especiais</b>. <br> <br>
+                    <b>Nota:</b> Uma vez que definida uma imagem para plano de fundo em um determinado
+                    dimensionamento, todos os outros devem ser definidos para que a alteração seja
+                    aplicada. <br>
+            
+                    <br>
+                    <img class="img-fluid my-2 img-exp" src="static/images/outrasopcoes/oo_par17.jpg" alt="">
+                    <br> <br>
+
+                    Após preencher os campos, salve as alterações para obter a sua URL de acesso. Feito
+                    isso, você também pode acessar a página do Portal do Aluno e ver suas definições
+                    aplicadas clicando no link. <br>
+
+                    <br>
+                    <img class="img-fluid my-2 img-exp" src="static/images/outrasopcoes/oo_par18.jpg" alt="">
+                    <br> <br>
+
+                    Note que ao acessar a URL personalizada o plano de fundo da tela de Login é a mesma
+                    imagem que foi definida na configuração.
+
+                    <br>
+                    <img class="img-fluid my-2 img-exp" src="static/images/outrasopcoes/oo_par19.jpg" alt="">
+                    <br> <br>
+                </li>
+                
+                <li><b>$ DESCONTOS:</b> Na guia descontos será possível colocar o valor a ser
+                    descontado em casos de alunos que paguem até uma data x. Podendo ser o valor
+                    em reais ou porcentagem.
+                </li>
+
+                <li><b>SMS:</b> O sistema vem com a opção de ser inserido um sistema de envio de SMS,
+                    lembrando o aluno do horário de aula, enviando parabéns no dia do aniversário,
+                    e avisando em caso de falta. Para colocar essa função no sistema é necessário
+                    adquirir o sistema com outra empresa. O tutorial para inserir a função será
+                    disponibilizado também.
+                </li>
+
+                <li><b>PAGSEGURO:</b> Nosso grupo tem parceria com a pagseguro, para que usando o
+                    nosso sistema, você consiga ter descontos nas taxas de uso. Para se enquadrar
+                    nas taxas será necessário enviar um e-mail solicitando à pagseguro a inclusão.
+                    Vide tutorial pagseguro. <br>
+                </li>
+        </ul>
+
+        Após ser incluído na parceria, você deverá colocar as informações pedidas nos campos.
+        O e-mail de cadastro da PAGSEGURO, o Token gerado (caso não saiba como gerar,
+        nosso suporte técnico ou da pagseguro poderá te auxiliar) e em quantas parcelas você
+        deseja que o aluno possa parcelar sem que seja cobrado juros, a quantidade não pode ser
+        menor do que 1 e nem maior do que 12. <br> <br>
+
+        Após incluir essas informações o sistema estará habilitado para gerar boletos e efetuar
+        pagamentos com cartão direto pela matricula do aluno.
+
+        <br>
+        <img class="img-fluid my-2 img-exp" src="static/images/outrasopcoes/oo_par20.jpg" alt="">
+        <br> <br>
+        
+        Os planos de recorrência precisam ser criados antes de serem inseridos na matrícula do
+        aluno. <br>
+        Para cadastrar a recorrência na matrícula serão necessárias algumas informações paga o
+        pagamento, vide tutorial pagseguro. <br>
+        Caso queira, todas as informações poderão ser editadas posteriormente. <br>
+        O TOKEN não fica visível por questões de segurança após a conclusão da edição. <br>
+     </p>
+     `, `
+         guia, aba, outras opcoes, opçoes, parâmetros, paramentros, perfis, perfil
+     `,
+     ""
+ ],
 ]
 
 /*

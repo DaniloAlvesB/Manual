@@ -237,38 +237,84 @@ function render_text_content(text, list){
 function render_text_content_id(id){
     var myDiv = document.getElementById('text_content');
     myDiv.scrollTop = 0;
-    if(content[id][3] != ""){
-        text_content.innerHTML = `
-            <div class="d-flex flex-row">
-                <h4 class="col mx-3">${content[id][0]}</h4>
-            </div>
-            <hr>
-            <a href="${content[id][3]}" class="btn btn-primary mb-3" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-btn-fill" viewBox="0 0 16 16">
-                    <path d="M0 12V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm6.79-6.907A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"></path>
-                </svg>
-                Vídeo explicativo
-            </a>
-            ${content[id][1]}
-            <!-- 
-            <hr>
-            <div class="d-flex flex-row">
-                <h5>Vídeo explicativo: </h5>
-                <span class="p-1">${content[id][0]}</span>
-            </div>
-            
-           <div id="${content[id][0]}_video" class="ratio ratio-16x9">
-                <iframe src="${content[id][3]}" title="YouTube video" allowfullscreen></iframe>
-            </div> -->
-        `
+    if(celular == false){
+        if(content[id][3] != ""){
+            text_content.innerHTML = `
+                <div class="d-flex flex-row py-2 rounded" style="margin-bottom: 100px; z-index: 1; display:block; position:fixed; top:15vh; left:37vw; width:54vw; background-image: linear-gradient(to bottom, white, rgb(250, 250, 250));">
+                    <h4 class="col mx-3">${content[id][0]}</h4>
+                    <hr>
+                </div>
+                <a href="${content[id][3]}" class="btn btn-primary my-3" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-btn-fill" viewBox="0 0 16 16">
+                        <path d="M0 12V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm6.79-6.907A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"></path>
+                    </svg>
+                    Vídeo explicativo
+                </a>
+                <div class="my-4">
+                ${content[id][1]}
+                </div>
+                <!-- 
+                <hr>
+                <div class="d-flex flex-row">
+                    <h5>Vídeo explicativo: </h5>
+                    <span class="p-1">${content[id][0]}</span>
+                </div>
+                
+            <div id="${content[id][0]}_video" class="ratio ratio-16x9">
+                    <iframe src="${content[id][3]}" title="YouTube video" allowfullscreen></iframe>
+                </div> -->
+            `
+        }else{
+            text_content.innerHTML = `
+            <div class="d-flex flex-row py-2 rounded" style="margin-bottom: 100px; z-index: 1; display:block; position:fixed; top:15vh; left:37vw; width:54vw; background-image: linear-gradient(to bottom, white, rgb(250, 250, 250));">
+                    <h4 class="col mx-3">${content[id][0]}</h4>
+                    <hr>
+                </div>
+
+                <div style="margin-top: 7vh;">
+                ${content[id][1]}
+                </div>
+            `
+        }
     }else{
-        text_content.innerHTML = `
-            <div class="d-flex flex-row text-center justify-content-between">
-                <h4 class="mx-3">${content[id][0]}</h4>
-            </div>
-            <hr>
-            ${content[id][1]}
-        `
+        if(content[id][3] != ""){
+            text_content.innerHTML = `
+                <div class="d-flex flex-row py-2 rounded" style="margin-bottom: 100px; z-index: 0; display:block; position:fixed; top:8vh; left:0; width:100%; background-image: linear-gradient(to bottom, white, rgb(250, 250, 250));">
+                    <h4 class="col mx-3">${content[id][0]}</h4>
+                    <hr>
+                </div>
+                <a href="${content[id][3]}" class="btn btn-primary my-3" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-btn-fill" viewBox="0 0 16 16">
+                        <path d="M0 12V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm6.79-6.907A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"></path>
+                    </svg>
+                    Vídeo explicativo
+                </a>
+                <div class="my-4">
+                ${content[id][1]}
+                </div>
+                <!-- 
+                <hr>
+                <div class="d-flex flex-row">
+                    <h5>Vídeo explicativo: </h5>
+                    <span class="p-1">${content[id][0]}</span>
+                </div>
+                
+            <div id="${content[id][0]}_video" class="ratio ratio-16x9">
+                    <iframe src="${content[id][3]}" title="YouTube video" allowfullscreen></iframe>
+                </div> -->
+            `
+        }else{
+            text_content.innerHTML = `
+            <div class="d-flex flex-row py-2 rounded" style="margin-bottom: 100px; z-index: 0; display:block; position:fixed; top:8vh; left:0; width:100%; background-image: linear-gradient(to bottom, white, rgb(250, 250, 250));">
+                    <h4 class="col mx-3">${content[id][0]}</h4>
+                    <hr>
+                </div>
+
+                <div style="margin-top: 3vh;">
+                ${content[id][1]}
+                </div>
+            `
+        }
     }
 
     text_content.innerHTML += `
