@@ -26,10 +26,10 @@ let title2 = [
     ["Portal do Aluno", "portaldoaluno_primeiroacesso", 2, 1],
 
     //Title - 2
-    ["Abertura de caixa", 'aberturacaixa', 0, 0],
+    ["Abertura de caixa", 'aberturacaixa', 0, 3],
 
     //Title - 3
-    ["Cadatro de aluno", 'aberturacaixa', 0, 0],
+    ["Cadatro de aluno", 'aberturacaixa', 0, 4],
 
 
     //Title - 4
@@ -42,7 +42,7 @@ let title2 = [
     ["Tela Inicial do Portal do Aluno", "acessandoportal_telainicial", 9, 5],
 
     //Title - 6 
-    ["Alterando aula e status do curso", 'altnumaulastatuscurso', 0, 0],
+    ["Alterando aula e status do curso", 'altnumaulastatuscurso', 0, 10],
 
     //MANUTENÇÃO
     //Title - 7

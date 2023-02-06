@@ -244,13 +244,14 @@ function render_text_content_id(id){
                     <h4 class="col mx-3">${content[id][0]}</h4>
                     <hr>
                 </div>
+                <div style="margin-top: 7vh;"></div>
                 <a href="${content[id][3]}" class="btn btn-primary my-3" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-btn-fill" viewBox="0 0 16 16">
                         <path d="M0 12V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm6.79-6.907A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"></path>
                     </svg>
                     Vídeo explicativo
                 </a>
-                <div class="my-4">
+                <div>
                 ${content[id][1]}
                 </div>
                 <!-- 
@@ -260,7 +261,7 @@ function render_text_content_id(id){
                     <span class="p-1">${content[id][0]}</span>
                 </div>
                 
-            <div id="${content[id][0]}_video" class="ratio ratio-16x9">
+                <div id="${content[id][0]}_video" class="ratio ratio-16x9">
                     <iframe src="${content[id][3]}" title="YouTube video" allowfullscreen></iframe>
                 </div> -->
             `
@@ -317,11 +318,46 @@ function render_text_content_id(id){
         }
     }
 
-    text_content.innerHTML += `
-        <div id="content">
+    var next = 0;
+    if(title2[id+1][2] == 0){
+        next = title2[id+1][3];
+    }else{
+        next = title2[id+1][2];
+    }
 
+    var after = 0;
+    if(title2[id-1][2] == 0){
+        after = title2[id-1][3];
+    }else{
+        after = title2[id-1][2];
+    }
+
+    text_content.innerHTML += `
+        <hr>
+        <h4 class="container-fluid text-center">Tópicos</h4>
+        <div id="content_t" class="container d-flex flex-row justify-content-between">
         </div>
     `
+    if(after > 0){
+        content_t.innerHTML += `
+            <div class="col-6 text-center">
+                <b>Anterior</b>
+                <button class="card container-fluid p-2 text-left subtitle-manual" onclick="render_text_content_id(${after})">
+                    ${title2[id-1][0]}
+                </button>
+            </div>
+        `
+    }
+    if(next < content.length){
+        content_t.innerHTML += `
+            <div class="col-6 text-center">
+                <b>Próximo</b>
+                <button class="card container-fluid p-2 text-left subtitle-manual" onclick="render_text_content_id(${next})">
+                    ${title2[id+1][0]}
+                </button>
+            </div>
+        `
+    }
 }
 
 // RENDER
