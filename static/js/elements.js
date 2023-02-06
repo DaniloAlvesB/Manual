@@ -113,7 +113,7 @@ function render_list_content(){
                                     <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"></path>
                                 </svg>
                                 <a class="title-menual fs-5" data-bs-toggle="collapse" href="#${title1[i][1]}" role="button" aria-expanded="false" aria-controls="${title1[i][1]}">
-                                    ${title1[i][0]}
+                                    ${i} - ${title1[i][0]}
                                 </a>
                             </div>
                         </p>
@@ -127,11 +127,13 @@ function render_list_content(){
                     </div>
                 `
 
+                let cont = 0;
                 for(var a = 1; a < title2.length; a++){
                     if(i == title2[a][3]){
+                        cont++
                         document.getElementById(title1[i][1]).innerHTML += `
                         <button class="card container-fluid p-2 text-left subtitle-manual" onclick="render_text_content_id(${title2[a][2]})">
-                            ${title2[a][0]}
+                            ${i}.${cont} - ${title2[a][0]}
                         </button>
                         `
                     }
@@ -146,7 +148,7 @@ function render_list_content(){
                                     <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"></path>
                                 </svg>
                                 <a class="title-menual fs-5" data-bs-toggle="collapse" role="button" aria-expanded="false" onclick="render_text_content_id(${title1[i][3]})">
-                                    ${title1[i][0]}
+                                    ${i} - ${title1[i][0]}
                                 </a>
                             </div>
                         </p>
@@ -163,14 +165,14 @@ function render_list_content(){
                     <div class="py-2 bg-white-d">
                         <p class="m-0">
                             <div class="fs-2 m-0">
-                                <a class="title-menual fs-5" data-bs-toggle="collapse" href="#${title1[i][1]}" role="button" aria-expanded="false" aria-controls="${title1[i][1]}">
+                                <a class="title-menual fs-5 text-left" data-bs-toggle="collapse" href="#${title1[i][1]}" role="button" aria-expanded="false" aria-controls="${title1[i][1]}">
                                     ${i} - ${title1[i][0]}
                                 </a>
                             </div>
                         </p>
                         <div class="row">
                             <div class="col">
-                                <div id="${title1[i][1]}" class="" style="margin-left: 2rem; padding-bottom: 1rem">
+                                <div id="${title1[i][1]}" class="text-left" style="margin-left: 2rem; padding-bottom: 1rem">
                                     
                                 </div>
                             </div>
@@ -183,8 +185,8 @@ function render_list_content(){
                     if(i == title2[a][3]){
                         cont++
                         document.getElementById(title1[i][1]).innerHTML += `
-                        <button class="card container-fluid p-2 text-center subtitle-manual" onclick="render_text_content_id(${title2[a][2]})">
-                        ${i}.${cont} - ${title2[a][0]}
+                        <button class="card container-fluid p-2 text-left subtitle-manual" onclick="render_text_content_id(${title2[a][2]})">
+                            ${i}.${cont} - ${title2[a][0]}
                         </button>
                         `
                     }
@@ -195,7 +197,7 @@ function render_list_content(){
                     <div class="py-2 bg-white-d">
                         <p class="m-0">
                             <div class="fs-2 m-0">
-                                <a class="title-menual fs-5" data-bs-toggle="collapse" role="button" aria-expanded="false" onclick="render_text_content_id(${title1[i][3]})" style=" padding-bottom: 1rem">
+                                <a class="title-menual fs-5 text-left" data-bs-toggle="collapse" role="button" aria-expanded="false" onclick="render_text_content_id(${title1[i][3]})" style=" padding-bottom: 1rem">
                                     ${i} - ${title1[i][0]}
                                 </a>
                             </div>

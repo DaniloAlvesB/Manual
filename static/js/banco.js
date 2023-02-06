@@ -35,6 +35,7 @@ let title2 = [
     ["Acessando o Portal do Aluno", "acessandoportal_acessando", 8, 5],
     ["Tela Inicial do Portal do Aluno", "acessandoportal_telainicial", 9, 5],
 
+    //MANUTENÇÃO
     //Title - 7
     ["Sobre a guia Manutenção", "manutencao_sobre", 11, 7],
     ["Cursos", "manutencao_cursos", 12, 7],
@@ -48,6 +49,34 @@ let title2 = [
     ["Contas do caixa", "manutencao_contascaixa", 20, 7],
     ["Faixa etária", "manutencao_faixaetaria", 21, 7],
     ["Telemarketing", "manutencao_telemark", 22, 7],
+
+    //MOVIMENTAÇÃO
+    //Title - 8
+    ["Sobre a guia Movimentação", "mov_sobre", 23, 8],
+    ["Cancela matrícula", "mov_cancmatri", 24, 8],
+    ["Reativa matrícula", "mov_reatmatri", 25, 8],
+    ["Finaliza matrícula", "mov_finalizamatri", 26, 8],
+    ["Tranca matrícula", "mov_trancamatri", 27, 8],
+    ["Quitar parcela", "mov_quitarparc", 28, 8],
+    ["$Caixa e contas do caixa", "mov_contascaixa", 29, 8],
+    ["Lança frequência", "mov_lancafreq", 30, 8],
+    ["Lança reposição", "mov_lancarepos", 31, 8],
+    ["Lança aula avulsa", "mov_lancaavulsa", 32, 8],
+    ["Pedido de apostila", "mov_pedidoapos", 33, 8],
+    ["Lançar/Acompanhar notas", "mov_lancanotas", 34, 8],
+
+    //RELATÓRIOS
+    //Title - 9
+    ["Sobre a guia Relatórios", "rel_sobre", 35, 9],
+    ["Alunos", "mov_cancmatri", 36, 9],
+    ["Matrículas", "mov_reatmatri", 37, 9],
+    ["Cursos", "mov_finalizamatri", 38, 9],
+    ["Plano de contas", "mov_trancamatri", 39, 9],
+    ["Quadro de horário", "mov_quitarparc", 40, 9],
+    ["Grade de horários", "mov_contascaixa", 41, 9],
+    ["Alunos ON/OFF-LINE", "mov_lancafreq", 42, 9],
+    ["Boletim alunos", "mov_lancarepos", 43, 9],
+
 ]
 
 let content = [
@@ -390,6 +419,7 @@ let content = [
         "http://www.videostutoriais.grupooportunidade.com.br/suporte/videos/hardlock/4.html"
     ],
 
+    //MANUTENÇÃO
     //11
     [`Sobre a guia Manutenção`,
         `
@@ -630,6 +660,7 @@ let content = [
         ""
     ],
 
+    //22
     [`Telemarketing`,
         `
         <p class="mx-2">
@@ -640,4 +671,457 @@ let content = [
         `,
         ""
     ],
+
+    //MOVIMENTAÇÃO
+    //23
+    [`Sobre a guia Movimentação`,
+        `
+        <p class="mx-2">
+            Nessa guia será possível fazer alterações relacionadas diretamente com as matrículas
+            dos alunos. Mais abaixo falaremos sobre cada uma delas separadamente.  <br>
+
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_sobre.jpg" alt="guia_movimentacao">
+            <br> <br>
+
+        </p>
+        `, `
+            guia, aba, movimentacao, move, mov, sobre, matricula
+        `,
+        ""
+    ],
+
+    //24
+    [`Cancela matrícula`,
+        `
+        <p class="mx-2">
+            A cobrança do sistema escola online é feita em cima das matrículas ATIVAS dentro do
+            sistema, por isso é muito importante desativar as matrículas em que os alunos
+            efetivamente não estão fazendo os cursos. A guia CANCELA MATRÍCULA é
+            destinada para alunos que desistiram dos cursos e não pretendem retornar. <br>
+            Ao clicar na guia CANCELA MATRÍCULA, você será direcionado para a tela abaixo. <br>
+            Nessa tela você deverá escolher o aluno, clicando na lupa a frente do nome dele. E em
+            seguida no botão verde que aparece na frente do nome dele, um pouco mais abaixo,
+            confirmando que essa é a matrícula que deseja cancelar. <br>
+            
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_cancmatri1.jpg" alt="">
+            <br> <br>
+
+            Após selecionar a matrícula desejada, a tela abaixo será exibida. É necessário colocar o
+            motivo do cancelamento. Ele pode ser digitado ou selecionado dentro das opções préexistentes. <br>
+            Após colocar o motivo, basta clicar no botão vermelho <button class="btn btn-danger text-white"><b>X</b> CANCELAR MATRÍCULA</button> e a
+            matrícula desejada estará cancelada. <br>
+
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_cancmatri2.jpg" alt="">
+            <br> <br>
+
+        </p>
+        `, `
+            guia, aba, cancela, cancelamento, matri, matricula
+        `,
+        ""
+    ],
+
+    //25
+    [`Reativa matrícula`,
+        `
+        <p class="mx-2">
+            O procedimento de reativação de matrícula funciona semelhante ao processo de
+            cancelamento de matrícula. Mudando apenas a opção a ser escolhida dentre as guias.
+            Após selecionar o aluno desejado, basta clicar no botão <button class="btn btn-primary text-white"><b></b> REATIVAR MATRÍCULA</button>
+            para que a matrícula selecionada seja reativada. <br>
+            Esse procedimento de reativação pode ser feito em matrículas canceladas, trancadas e
+            finalizadas. <br>
+            
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_reativamatri.jpg" alt="">
+            <br> <br>
+
+        </p>
+        `, `
+            guia, aba, reativar, reativa, voltar, matri, matricula
+        `,
+        ""
+    ],
+
+    //26
+    [`Finaliza matrícula`,
+        `
+        <p class="mx-2">
+            O processo de finalização de matrícula é indicado para os casos em que os alunos já
+            finalizaram os seus cursos. <br>
+            O procedimento de finalização de matrícula funciona semelhante ao processo de
+            cancelamento de matrícula. Mudando apenas a opção a ser escolhida dentre as guias. <br>
+            Após selecionar o aluno desejado, basta clicar no botão <button class="btn btn-success text-white"><b></b> FINALIZAR MATRÍCULA</button>
+            para que a matrícula selecionada seja finalizada. <br>
+            
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_finalizamatri.jpg" alt="">
+            <br> <br>
+
+        </p>
+        `, `
+            guia, aba, , finalizar, finalização, finalizacao, matri, matricula
+        `,
+        ""
+    ],
+
+    //27
+    [`Tranca matrícula`,
+        `
+        <p class="mx-2">
+            O processo de trancamento de matrícula é indicado para os casos em que os alunos, por
+            algum motivo, não conseguem continuar o curso, mas pretende continuá-lo
+            posteriormente. <br>
+            O procedimento de trancamento de matrícula funciona semelhante ao processo de
+            cancelamento de matrícula. Mudando apenas a opção a ser escolhida dentre as guias. <br>
+            Após selecionar o aluno desejado, basta clicar no botão <button class="btn btn-warning text-white"><b></b> TRANCAR MATRÍCULA</button> para
+            que a matricula selecionada seja trancada. <br>
+            
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_trancamatri.jpg" alt="">
+            <br> <br>
+
+        </p>
+        `, `
+            guia, aba, tranca, trancar, matri, matricula
+        `,
+        ""
+    ],
+
+    //28
+    [`Quitar parcela`,
+        `
+        <p class="mx-2">
+            Por essa opção é possível quitar as parcelas do aluno sem a necessidade de ir até a
+            matrícula do mesmo. Para quitar a parcela dessa forma, é necessário ter em mãos o
+            número do código de barras do carnê do aluno. <br>
+
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_quitaparc1.jpg" alt="">
+            <br> <br>
+            
+            Após inserir o número do carnê as informações do aluno aparecerão nos campos abaixo.
+            Se todas as informações estiverem corretas, basta clicar no botão <button class="btn btn-success text-white"><b></b> QUITAR </button> para que a
+            parcela do aluno será quitada dentro do sistema. <br>
+                
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_quitaparc2.jpg" alt="">
+            <br> <br>
+
+        </p>
+        `, `
+            guia, aba, quita, quitar, percela, parcelas, pagamento, pagar, boleto, carnê, carne
+        `,
+        ""
+    ],
+
+    //29
+    [`$Caixa e contas do caixa`,
+        `
+        <p class="mx-2">
+            As guias Caixa e Contas do Caixa faz parte de um manual secundário apenas sobre o
+            uso do caixa dentro do sistema. Em caso de dúvidas, o manual também está disponível. <br>
+        </p>
+        `, `
+            guia, aba, caixa, conta, caixas, contas
+        `,
+        ""
+    ],
+
+    //30
+    [`Lança frequência`,
+    `
+        <p class="mx-2">
+            Essa função permite lançar frequência para o aluno ainda que o mesmo não tenha assistido aula
+            interativa dentro do sistema. Para lançar a frequência para o mesmo é necessário inserir o
+            número da matrícula do aluno no campo indicado pela seta e selecionar a opção HORÁRIO.. <br>
+            Após inserir a matrícula, ficarão disponíveis algumas opções. Para inserir a frequência, clique
+            no botão verde <button class="btn btn-success text-white"><b>+</b> FREQ. AULA </button> na frente do horário em que deseja que ela seja lançada. <br>
+        </p>
+
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_lancafreq.jpg" alt="">
+            <br> <br>
+        `, `
+            guia, aba, frquencias, frequencia, frequências, lancar, lançar
+        `,
+        ""
+    ],
+
+    //31
+    [`Lança repoisção`,
+    `
+        <p class="mx-2">
+            Essa opção permite que seja lançada uma reposição fora da matrícula do aluno.
+            Inserindo o número da matrícula no local indicado, ficarão disponíveis os horários para
+            serem agendados para o aluno. Caso não seja no dia atual a reposição, clique na data
+            para que seja aberto o calendário e você consiga escolher o dia desejado. Basta clicar no
+            botão <button class="btn btn-success text-white"><b>+</b></button> à frente do horário para inseri-lo para o aluno.
+        </p>
+
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_lancarepos.jpg" alt="">
+            <br> <br>
+        `, `
+            guia, aba, lanca, lançar, reposicao, reposição, repor, horário, horario
+        `,
+        ""
+    ],
+
+    //32
+    [`Lança aula avulsa`,
+    `
+        <p class="mx-2">
+            Essa opção só poderá ser utilizada em caso de alunos flex, caso contrário não será
+            possível lançar uma aula avulsa. Para lançar a aula para o aluno, clique na lupa no local
+            indicado, e busque pelo aluno que deseja lançar a aula. <br>
+            Após selecioná-lo, o campo de inserir horário ficará disponível, basta clicar no botão
+            <button class="btn btn-success text-white"><b>+</b></button> à frente do horário para inseri-lo para o aluno. <br>
+        </p>
+
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_lancaaulaavulsa.jpg" alt="">
+            <br> <br>
+        `, `
+            guia, aba, lanca, lançar, avulso, avulsa, flex, horário, horario, aula
+        `,
+        ""
+    ],
+
+    //33
+    [`Pedido de apostila`,
+    `
+        <p class="mx-2">
+            O sistema permite que seu aluno consiga fazer até a aula 05 sem que seja feito a entrega
+            da apostila dentro do sistema escola. É obrigatório que o aluno receba o material de
+            apoio para ter 100% de aproveitamento do curso. <br>
+            Para que o saldo de apostila conste dentro do sistema escola é necessário que seja feito
+            um pedido de apostila. <br>
+            Na guia MOVIMENTAÇÃO selecione a opção PEDIDO DE APOSTILA. Uma tela
+            semelhante a essa abaixo irá aparecer, nela clique em <button class="btn btn-success text-white"><b>+</b> NOVO PEDIDO</button> <br>
+
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_pedido1.jpg" alt="">
+            <br> <br>
+            
+            Essa telinha será aberta, contendo todos os cursos que o sistema possui. A primeira
+            coluna para pôr a quantidade de apostilas, é referente a apostilas físicas. Já a segunda, é
+            referente a apostilas digitais. Na lacuna deve ser colocado a quantidade de apostila que
+            deseja do curso referente. <br>
+
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_pedido2.jpg" alt="">
+            <br> <br>
+
+            Após colocar todas as apostilas que precisa, clique em ok. Seu pedido aparecerá igual na
+            tela abaixo. Clique em GRAVAR. <br>
+
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_pedido3.jpg" alt="">
+            <br> <br>
+
+            Após gravar o pedido é necessário clicar no botão ENVIAR PEDIDO, para que seja
+            criado um arquivo em bloco de notas. Este arquivo deve ser enviado ao setor de pedidos
+            para que a chave de liberação seja gerada, e com ela o saldo seja inserido dentro do seu
+            sistema. <br>
+            
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_pedido4.jpg" alt="">
+            <br> <br>
+
+            Após o envio do pedido ao setor de Pedidos e recebimento da chave de liberação, clique
+            na AÇÃO referente ao pedido criado. <br>
+
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_pedido5.jpg" alt="">
+            <br> <br>
+
+            Clique na opção ATUALIZAR ESTOQUE e insira a chave na caixinha que abrir. <br>
+
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_pedido6.jpg" alt="">
+            <br> <br>
+            
+            Clique em atualizar e pronto! Seu saldo de apostila foi atualizado!!
+        </p>
+
+        `, `
+            guia, aba, lanca, lançar, pedido, pedir, apostila, apostilas, liberacao, liberação
+        `,
+        ""
+    ],
+
+    //34
+    [`Lançar/Acompanhar notas`,
+    `
+        <p class="mx-2">
+
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_lancanota.jpg" alt="">
+            <br> <br>
+
+            Nessa guia é possível lançar ou visualizar a nota dos cursos inseridos na matrícula do aluno. <br>
+
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_lancanota2.jpg" alt="">
+            <br> <br>
+
+            Basta inserir o número da matrícula do aluno, irá aparecer todos os cursos disponíveis na matrícula,
+            o status (E para EM ESPERA, A para ANDAMENTO e C para CONCLUÍDO), o número da aula,
+            e o botão visualizar e inserir nota.
+        </p>
+        `, `
+            guia, aba, lanca, lançar, nota, notas, boletim
+        `,
+        ""
+    ],
+
+    //35
+    [`Sobre a guia Relatórios`,
+        `
+        <p class="mx-2">
+            Nessa guia será possível retirar diversos relatórios referentes aos alunos e suas
+            matrículas. Bem como também o saldo de apostila, grades de horário e boletim do
+            aluno. Mais abaixo veremos mais detalhadamente sobre cada uma das guias.
+
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/relatorios/rel_sobre.jpg" alt="">
+            <br> <br>
+        </p>
+        `, `
+            guia, aba, 
+        `,
+        ""
+    ],
+
+    //36
+    [`Sobre a guia Relatórios`,
+        `
+        <p class="mx-2">
+            Na guia alunos são encontrados relatórios referentes aos cadastros dos alunos. Eles são
+            subdivididos por: <br>
+
+            <ul class="mx-2">
+                <li><b>Aniversariantes:</b> É possível filtrar pelo mês de aniversário e o status da
+                matrícula);</li>
+                <li><b>Frequência:</b> Gera um relatório das frequências dos alunos através dos filtros:
+                Período, Status da Matrícula, Presente S/N (necessária permissão de acesso ao usuário
+                logado).</li>
+            
+                <br>
+                <b>ACESSE O MENU RELATÓRIOS > ALUNOS > FREQUÊNCIA</b>
+
+                <br>
+                <img class="img-fluid my-2 img-exp" src="static/images/relatorios/rel_alunos1.jpg" alt="">
+                <br> <br>
+
+                <li>Selecione através do menu ou digite um período para busca (esse filtro busca as
+                frequências registradas entre as datas selecionadas):</li>
+                
+                
+
+                <li>Selecione o status das matrículas que deseja filtrar:</li>
+
+
+
+                <li>Selecione o status de presença das frequências que deseja buscar e clique em Filtrar:</li>
+
+
+
+                <li>O botão de busca retornará os dados das frequências registradas correspondentes aos
+                filtros aplicados, exibindo as seguintes colunas: Data da frequência, Número da
+                matricula, Status da matrícula, Nome do aluno, Tipo de aula, Computador, Horário de
+                início da frequência, Horário de término da frequência, Status de presença, Saiu cedo e
+                Motivo.</li>
+                <li>Por padrão, os registros aparecem ordenados por datas, das mais recentes para as mais
+                antigas. Clicando na guia da coluna data esses valores podem ser reordenados para
+                ordem inversa:</li>
+
+
+
+                <li>A busca vai retornar os resultados dos filtros aplicados. Você pode gerar um arquivo
+                PDF ou Planilha do Excel para visualização e impressão dos dados.</li>
+                
+
+
+                <li>Ativar permissão do Relatório de Frequências ao perfil/usuário</li>
+                <li>Acesse o menu Outras Opções > Perfis:</li>
+
+
+
+                <li>Em Perfis Cadastrados selecione o perfil que deseja atribuir a permissão:</li>
+
+
+
+                <li>Em Controle de Perfil, desça a barra de rolagem até o menu Relatórios > Alunos >
+                Frequência. Note que a princípio o acesso desse relatório vai estar como NEGADO por
+                padrão:</li>
+
+
+
+                <li>De um clique sobre a opção negado e um menu com as opções de acesso será exibido.
+                Selecione a permissão desejada com um clique:</li>
+
+
+
+                <li>No menu de Perfis Cadastrados selecione a opção GRAVAR para salvar as alterações
+                realizadas:</li>
+                
+
+                
+                Obs.: O caminho de acesso ao relatório só será exibido para usuários com as devidas
+                permissões de acesso definidas. Caso a atribuição de permissão seja definida ao próprio
+                usuário logado em uma seção, é necessário que o mesmo encerre sua seção e realize o
+                Login novamente para que as configurações sejam aplicadas ao seu.
+
+                <li>Faltantes: É possível filtrar por período e por quantidade de faltas consecutivas.</li>
+                <li>Inadimplentes: alunos com mensalidades em aberto</li>
+                <li>A terminar: alunos que estão com o contrato próximo do término</li>
+                <li>Terminaram: Alunos que estão com a matrícula finalizada.</li>
+                <li>Parcelas a receber: É possível filtrar por período, pelo status da matrícula e
+                também definir uma data limite de pagamento, para que mostre as parcelas com
+                e sem desconto de pontualidade.</li>
+                <li>Parcelas Recebidas: É possível filtrar por período e pelo status da matrícula, as
+                parcelas recebidas.</li>
+                <li>Não matriculados: Alunos que tem o cadastro feito, mas sem matricula.</li>
+                <li>Acompanhar aluno: Neste relatório é possível saber quais alunos estão
+                atrasados ou adiantados nos cursos.</li>
+                <li>Acompanhar alunos por módulos: Este relatório possibilita acompanhar os
+                alunos adiantados ou atrasados diferenciando por módulos.</li>
+                <li>Perfil Aluno: Neste relatório será possível ver quais foram as respostas dadas
+                pelos alunos no questionário inicial do portal do Aluno. </li>
+            </ul>
+
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/relatorios/rel_sobre.jpg" alt="">
+            <br> <br>
+        </p>
+        `, `
+            guia, aba, 
+        `,
+        ""
+    ],
 ]
+
+/*
+    [`Title`,
+        `
+        <p class="mx-2">
+           Content
+
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/" alt="">
+            <br> <br>
+
+            <button class="btn btn-success text-white"><b>x</b> CANCELA MATRÍCULA</button>
+
+        </p>
+        `, `
+            guia, aba, 
+        `,
+        ""
+    ],
+*/
