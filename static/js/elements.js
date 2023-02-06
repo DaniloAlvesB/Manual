@@ -212,7 +212,7 @@ function render_list_content(){
 
                 let cont = 0;
                 for(var a = 1; a < title2.length; a++){
-                    if(i == title2[a][3]){
+                    if(i == title2[a][3] && title2[a][2] != 0){
                         cont++
                         document.getElementById(title1[i][1]).innerHTML += `
                         <button class="card container-fluid p-2 text-left subtitle-manual" onclick="render_text_content_id(${title2[a][2]})">
