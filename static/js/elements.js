@@ -19,9 +19,9 @@ function render_list(){
         main_content.innerHTML = `
             <div class="col-12 col-md-4 rounded border border-opacity-50" style="max-height: 75vh; min-height: 75vh">
                 ${nav_list}
-                <div id="list_content" style="overflow-x: hidden; overflow-y: scroll; max-height: 65vh; min-height: 65vh"></div>
+                <div id="list_content" style="overflow-x: hidden; overflow-y: scroll; max-height: 75vh; min-height: 65vh"></div>
             </div>
-            <div id="text_content" class="col-12 col-md-8 rounded p-2" style="overflow-x: hidden; overflow-y: scroll; max-height: 75vh">
+            <div id="text_content" class="col-12 col-md-8 rounded p-2">
                 <h3 class="m-2">Olá!</h3>
                 <hr>
                 <p class="mx-2">
@@ -159,7 +159,7 @@ function render_list_content(){
 
                 let cont = 0;
                 for(var a = 1; a < title2.length; a++){
-                    if(i == title2[a][3]){
+                    if(i == title2[a][3] && title2[a][2] != 0){
                         cont++
                         document.getElementById(title1[i][1]).innerHTML += `
                         <button class="card container-fluid p-2 text-left subtitle-manual" onclick="render_text_content_id(${title2[a][2]})">
@@ -270,39 +270,30 @@ function render_text_content_id(id){
     if(celular == false){
         if(content[id][3] != ""){
             text_content.innerHTML = `
-                <div class="d-flex flex-row py-2 rounded" style="margin-bottom: 100px; z-index: 1; display:block; position:fixed; top:15vh; left:37vw; width:54vw; background-image: linear-gradient(to bottom, white, rgb(250, 250, 250));">
-                    <h4 class="col mx-3">${content[id][0]}</h4>
-                    <hr>
-                </div>
-                <div style="margin-top: 7vh;"></div>
-                <a href="${content[id][3]}" class="btn btn-primary my-3" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-btn-fill" viewBox="0 0 16 16">
-                        <path d="M0 12V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm6.79-6.907A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"></path>
-                    </svg>
-                    Vídeo explicativo
-                </a>
                 <div>
-                ${content[id][1]}
+                    <div>
+                        <h4 class="col mx-3">${content[id][0]}</h4>
+                        <hr>
+                    </div>
+                    <a href="${content[id][3]}" class="btn btn-primary mb-3" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-btn-fill" viewBox="0 0 16 16">
+                            <path d="M0 12V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm6.79-6.907A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"></path>
+                        </svg>
+                        Vídeo explicativo
+                    </a>
+                    <div style="overflow-x: hidden; overflow-y: scroll; max-height: 60vh">
+                    ${content[id][1]}
+                    </div>
                 </div>
-                <!-- 
-                <hr>
-                <div class="d-flex flex-row">
-                    <h5>Vídeo explicativo: </h5>
-                    <span class="p-1">${content[id][0]}</span>
-                </div>
-                
-                <div id="${content[id][0]}_video" class="ratio ratio-16x9">
-                    <iframe src="${content[id][3]}" title="YouTube video" allowfullscreen></iframe>
-                </div> -->
             `
         }else{
             text_content.innerHTML = `
-            <div class="d-flex flex-row py-2 rounded" style="margin-bottom: 100px; z-index: 1; display:block; position:fixed; top:15vh; left:37vw; width:54vw; background-image: linear-gradient(to bottom, white, rgb(250, 250, 250));">
+                <div class="d-flex flex-row py-2 rounded">
                     <h4 class="col mx-3">${content[id][0]}</h4>
                     <hr>
                 </div>
 
-                <div style="margin-top: 7vh;">
+                <div style="overflow-x: hidden; overflow-y: scroll; max-height: 75vh">
                 ${content[id][1]}
                 </div>
             `
