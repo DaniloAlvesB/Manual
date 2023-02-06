@@ -1608,3 +1608,14 @@ let content = [
         ""
     ],
 */
+
+let links = [
+
+    //['Nome', 'Descrição', 'Link']
+    ['nome_pad', 'desc_pad', 'link_pad'],
+    ['Sistema Escola', 'Link para acesso ao Sistemas Escola Online.', 'http://www.sistemaescolaead.grupooportunidade.com.br/seonline/index.jsf'],
+    ['Portal do Aluno', 'Link para acesso ao Portal do Aluno Online.', 'http://ead.grupooportunidade.com.br/'],
+    ['Gabaritos', 'Link para acesso aos gabaritos de todos os cursos.', 'http://tiny.cc/Gabaritos'],
+    ['Arquivos de curso', 'Link para acesso aos arquivos utilizados durante os cursos.', 'http://tiny.cc/arquivosCursos'],
+
+]

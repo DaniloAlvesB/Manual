@@ -31,6 +31,27 @@ function render_list(){
                     suas principais funcionalidades e recursos.<br>
                     Espero que a nossa parceria seja de muito sucesso!
                 </p>
+
+                <hr>
+                <div class="d-flex flex-wrap">
+                    <button type="button" class="col-12 col-xl-6 btn btn-light p-0 d-flex justify-content-start" onclick="pesq_prep()">
+                        <a type="button" class="btn btn-secondary" onclick="pesq_prep()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+                            </svg>
+                        </a>
+                        <b class="mt-2 mx-2">Pesquisar tópicos</b>
+                    </button>
+
+                    <button type="button" class="col-12 col-xl-6 btn btn-light p-0 d-flex justify-content-start" onclick="render_list_content()">
+                        <a type="button" class="btn btn-secondary" onclick="render_list_content()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list-ul" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"></path>
+                            </svg>
+                        </a>
+                        <b class="mt-2 mx-2">Exibir todos os tópicos</b>
+                    </button>
+                </div>
             </div>
         `
 
@@ -83,6 +104,15 @@ function render_list(){
                     <button class="card container-fluid p-2 text-left subtitle-manual" onclick="render_text_content_id(${title2[3][2]})">
                         ${title2[3][0]}
                     </button>
+                </div>
+
+                <div class="mt-4">
+                    <button type="button" class="btn btn-dark">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
+                        </svg>
+                    </button>
+                    Clique neste ícone na barra superior para ver todos os tópicos.
                 </div>
             </div>
         `
@@ -280,7 +310,7 @@ function render_text_content_id(id){
     }else{
         if(content[id][3] != ""){
             text_content.innerHTML = `
-                <div class="d-flex flex-row py-2 rounded" style="margin-bottom: 100px; z-index: 0; display:block; position:fixed; top:8vh; left:0; width:100%; background-image: linear-gradient(to bottom, white, rgb(250, 250, 250));">
+                <div class="d-flex flex-row rounded">
                     <h4 class="col mx-3">${content[id][0]}</h4>
                     <hr>
                 </div>
@@ -290,7 +320,7 @@ function render_text_content_id(id){
                     </svg>
                     Vídeo explicativo
                 </a>
-                <div class="my-4">
+                <div class="">
                 ${content[id][1]}
                 </div>
                 <!-- 
@@ -306,12 +336,12 @@ function render_text_content_id(id){
             `
         }else{
             text_content.innerHTML = `
-            <div class="d-flex flex-row py-2 rounded" style="margin-bottom: 100px; z-index: 0; display:block; position:fixed; top:8vh; left:0; width:100%; background-image: linear-gradient(to bottom, white, rgb(250, 250, 250));">
+            <div class="d-flex flex-row py-2 rounded">
                     <h4 class="col mx-3">${content[id][0]}</h4>
                     <hr>
                 </div>
 
-                <div style="margin-top: 3vh;">
+                <div style="">
                 ${content[id][1]}
                 </div>
             `
@@ -360,7 +390,37 @@ function render_text_content_id(id){
     }
 }
 
+function render_link(){
+
+    for(var i = 1; i < links.length; i++){
+        if(celular == false){
+            links_u.innerHTML += `
+                <a class="btn btn-light rounded m-2 p-0 border border-secondary" href="${links[i][2]}" target="_blank">
+                    <div class="col-12 p-1 m-0 bg-secondary text-light">
+                        <h4>${links[i][0]}</h4>
+                    </div>
+                    <div class="col-12 p-2">
+                        <p>${links[i][1]}</p>
+                    </div>
+                </a>
+            `
+        }else{
+            links_u.innerHTML += `
+                <a class="col-11 col-xl-8 btn btn-light rounded m-2 p-0 border border-secondary" href="${links[i][2]}" target="_blank">
+                    <div class="col-12 p-1 m-0 bg-secondary text-light">
+                        <h4>${links[i][0]}</h4>
+                    </div>
+                    <div class="col-12 p-2">
+                        <p>${links[i][1]}</p>
+                    </div>
+                </a>
+            `
+        }  
+    }
+
+}
+
 // RENDER
 render_list()
-render_list()
 render_list_content();
+render_link();
