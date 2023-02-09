@@ -164,12 +164,17 @@ let content = [
         
             <br>
             <img class="img-fluid my-2 img-exp" src="static/images/abre_caixa.jpeg" alt="Tela de abertura de caixa">
-            <br>
+            <br> <br>
 
             É necessário abri-lo todos os dias. Logo após abrir, o sistema vai perguntar se você
             deseja finalizar a abertura de caixa. Basta clicar no botão SIM que o sistema abrirá
             automaticamente. Caso clique em NÃO o sistema continuará com a tela de abertura do
             caixa em aberto. <br>
+
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/abre_caixa2.jpg" alt="Tela de abertura de caixa">
+            <br> <br>
+
             Se o caixa não for aberto, o sistema volta para a tela de inicial de Login. 
         </p>
     `, `
@@ -621,8 +626,70 @@ let content = [
     [`Plano de conta`,
         `
         <p class="mx-2">
-            A guia plano de contas faz parte de um manual secundário apenas sobre o uso do caixa
-            dentro do sistema. Em caso de dúvidas, o manual também se encontra disponível.
+            Esta opção serve para quando formos dar entrada e saída de dinheiro no caixa. Veja o
+            exemplo: ao efetuar o pagamento da conta de energia, é escolhida a opção energia; ao
+            receber mensalidades é escolhida a opção mensalidades; ao receber dinheiro de
+            impressão, escolhemos essa opção e, assim por diante. Isto é útil da seguinte forma: no
+            final do mês, a unidade faturou 20 mil reais, por exemplo, mas esses 20 mil foram
+            relativos a quê? Então, ao imprimir o plano de contas é mostrado separadamente de
+            onde veio esse dinheiro, por exemplo: 18 mil de mensalidades, 1 mil de matriculas e 1
+            mil de impressões. Veja um exemplo abaixo com outros números: <br>
+
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/planodecontas/pc1.jpg" alt="plano de contas">
+            <br> <br>
+
+            <ul class="mx-3">
+                <li><b>A.</b> Entre no menu MANUTENÇÃO e clique na opção PLANO DE CONTAS. </li>
+                <li><b>B.</b> Onde está Empresa, coloque o nome fantasia de sua empresa. </li>
+
+                <br>
+                <img class="img-fluid my-2 img-exp" src="static/images/planodecontas/pc2.jpg" alt="plano de contas">
+                <br> <br>
+
+                <li><b>C.</b> Clique sobre a seleção Expandir da guia para abrir a sequência do cadastro de plano
+                de contas. Uma outra guia aparecerá na frente, Nível 2, sobrepondo o item anterior. </li>
+
+                <br>
+                <img class="img-fluid my-2 img-exp" src="static/images/planodecontas/pc3.jpg" alt="plano de contas">
+                <br> <br>
+
+                <><b>D.</b> Igualmente como em outros itens, na caixa que aparece, as opções são editáveis,
+                poderá alterar os nomes das funções ou acrescentar outros clicando no botão Inserir. <br>
+                Para remover um item clica-se no botão Apagar. </li> <br>
+                OBSERVAÇÃO: Não altere as funções básicas do sistema, previamente
+                cadastradas.
+                <li><b>E.</b> Ao clicar sobre a seleção da guia Expandir da nova caixa Nível 2, do item Alunos,
+                aparecerá uma nova caixa, Nível 3, mostrando os itens dessa seleção, onde os mesmos
+                também poderão ser alterados ou incluir novos como da forma anterior, dependendo da
+                sua padronização de contas da unidade. </li>
+
+                <br>
+                <img class="img-fluid my-2 img-exp" src="static/images/planodecontas/pc4.jpg" alt="plano de contas">
+                <br> <br>
+
+                <li><b>F.</b> O mesmo poderá ser feito ao clicar na seleção da guia Expansão do item Caixa. </li>
+
+                <br>
+                <img class="img-fluid my-2 img-exp" src="static/images/planodecontas/pc5.jpg" alt="plano de contas">
+                <br> <br>
+
+                <li><b>G.</b> Este item, diferentemente do item Alunos, mostrará os itens relacionados ao Caixa,
+                para onde o dinheiro que será dada entrada no sistema será direcionado, ou quando for
+                efetuada uma retirada, para onde será levado. </li>
+            </ul>
+
+            <b>NOTA:</b> Os itens de Nível 3, ou seja, que pertencem a expansão do item Alunos e do
+            item Caixa nesse exemplo, tem o tipo de entrada ou retirada para cada item cadastrado,
+            onde editando a linha teremos <b>DÉBITO</b>, de onde será retirado o dinheiro e,
+            <b>CRÉDITO</b>, de onde o dinheiro será adicionado ao sistema. Basta editar cada linha do
+            plano de contas para inserir essas opções a cada item do nível 3.
+
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/planodecontas/pc6.jpg" alt="plano de contas">
+            <br> <br>
+
+            <li><b>H.</b> Feche a tela do plano de contas.</li>
         </p>
         `, `
             guia, aba, manutenção, manutencao, conta, contas, caixa
