@@ -944,6 +944,8 @@ let content = [
         <p class="mx-2">
             <h4>Caixa</h4>
             
+            <hr>
+
             <ul class="ml-3">
                 <h5>Entrada</h5>
                 <li><b>A.</b> No sistema sempre terá um caixa aberto, pois é requisito para o sistema abrir e se
@@ -985,6 +987,8 @@ let content = [
 
             </ul>
 
+            <hr>
+
             <ul class="ml-3">
                 <h5>Saída</h5>
                 <li><b>A.</b> A saída é o inverso da entrada, e segue os mesmos princípios; </li>
@@ -1007,9 +1011,81 @@ let content = [
                 <li><b>G.</b> A retirada foi efetuada. Ao clicar em Ok, o item será fechado. </li>
 
             </ul>
+
+            <hr>
+
+            <ul class="ml-3">
+                <h5>Movimentações</h5>
+                <li><b>A.</b>  Clique no menu MOVIMENTAÇÕES e leve o mouse à opção CAIXA. Feito isso, clique em MOVIMENTO CAIXA; </li>
+
+                <br>
+                <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_movcaixa.jpg" alt="">
+                <br> <br>
+
+                <li><b>B.</b>   Observe que estão sendo mostradas todas as movimentações feitas e o valor de seu caixa.
+                Nesta tela também é possível efetuar entradas e saídas da mesma forma como vimos anteriormente, apenas clicando nos botões referentes 
+                à movimentação que deseja efetuar. </li>
+            </ul>
+
+            <hr>
+
+            <ul class="ml-3">
+                <h5>Fechando o caixa</h5>
+                <li><b>A.</b>  Cada funcionário, quando está operando o sistema, trabalhará no caixa aberto. Quando é efetuada a troca de funcionário, 
+                o mesmo deverá fechar o caixa, para depois, o outro funcionário abrir um novo, mesmo que nas movimentações cada funcionário logado 
+                no sistema tenha suas devidas alterações de caixa registradas. Se o caixa for fechado à noite, somente no outro dia é que o 
+                outro funcionário o abrirá, procedendo da seguinte forma: </li> <br>
+
+                O funcionário fecha o caixa e não o abre mais. Quando o novo funcionário chegar, no outro dia, este abrirá o sistema e 
+                solicitará a abertura do caixa <br>
+
+                <li><b>B.</b> Na parte inferior da tela do item Movimentação do Caixa, clique no botão Fechar; </li>
+
+                <br>
+                <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_fechacaixa.jpg" alt="">
+                <br> <br>
+
+                <li><b>C.</b> Primeiramente, deve-se escolher para onde este dinheiro vai, ou seja, para o cofre ou
+                para o banco, nesse exemplo está marcado Cofre; </li>
+                <li><b>D.</b> Clique na seta da caixa <b>Destino do Caixa</b> e escolha <b>Cofre</b>; </li>
+
+                <br>
+                <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_fechacaixa2.jpg" alt="">
+                <br> <br>
+
+                <li><b>E.</b> Após o procedimento efetuado, vai aparecer uma mensagem solicitando que abra um novo caixa ou que feche o sistema: </li>
+
+                <br>
+                <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_fechacaixa3.jpg" alt="">
+                <br> <br>
+
+                <li><b>F.</b> Clique no botão ABRIR NOVO CAIXA, caso tenha ciência de quem o novo caixa estará aberto no mesmo login de 
+                usuário de sistema escola aberto anteriormente ainda; </li>
+                <li><b>G.</b> Caso não abra o novo caixa, apenas clique para sair do sistema; </li>
+                <li><b>H.</b> Caso opte por abrir um novo caixa então, apenas siga os passos de abertura pela tela que aparecer; </li>
+
+                <br>
+                <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_fechacaixa4.jpg" alt="">
+                <br> <br>
+
+                <li><b>I.</b> Observe que o caixa foi fechado e, agora, não podemos mais efetuar nem saída nem entrada. Aparecerá a 
+                data de fechamento na parte superior direita; </li>
+                <li><b>J.</b> Nesse momento será de grande utilidade, imprimir o relatório do caixa, para deixar armazenada a 
+                operação caso o procedimento não seja presenciado pela pessoa responsável pelas movimentações financeiras da 
+                unidade. Para isso clique no botão IMP. CAIXA para que o relatório seja salvo e possivelmente aberto em seguida 
+                para impressão; </li>
+
+                <br>
+                <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_fechacaixa5.jpg" alt="">
+                <br> <br>
+
+                <br>
+                <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_fechacaixa6.jpg" alt="">
+                <br> <br>
+            </ul>
         </p>
         `, `
-            guia, aba, caixa, conta, caixas, contas
+            guia, aba, caixa, conta, caixas, contas, entradas, saídas, saidas
         `,
         ""
     ],
