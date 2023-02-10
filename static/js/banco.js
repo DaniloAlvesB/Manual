@@ -1084,6 +1084,32 @@ let content = [
                 <br> <br>
             </ul>
         </p>
+
+        <br>
+        
+        <h4>Contas do caixa</h4>
+        <p>
+            Esta opção nos permite visualizar todas as nossas contas, o cofre, o banco, aplicações,
+            entre outros, além de ver quanto tem-se em cada caixa e o valor total do dinheiro em
+            caixa. <br>
+            <ul class="ml-3">
+                <li><b>A.</b> Posicione o mouse no menu MOVIMENTAÇÃO e, após, clique em CONTAS DO
+                CAIXA; </li>
+
+                <br>
+                <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_planoc.jpg" alt="">
+                <br> <br>
+
+                <li><b>B.</b> Note que apareceu a conta cofre como padrão e, na parte inferior, os botões, caso
+                desejemos efetuar alguma entrada ou saída. Nos resultados aparecerão juntamente, o
+                valor que temos no cofre no momento e o valor geral do caixa (a soma de todas as
+                contas que, no exemplo, estão zeradas); </li>
+                <li><b>C.</b> Na parte superior, clique na seta da caixa <b>Contas do Caixa</b> e escolha Banco; </li>
+                <li><b>D.</b> Assim, serão mostrados os valores existentes neste tipo de caixa. Se for efetuar algum
+                pagamento com cheque ou depositar algum dinheiro nessa conta, é preciso usar os
+                botões abaixo na tela. </li>
+            </ul>
+        </p>
         `, `
             guia, aba, caixa, conta, caixas, contas, entradas, saídas, saidas
         `,
