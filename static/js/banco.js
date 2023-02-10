@@ -913,6 +913,24 @@ let content = [
             <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_quitaparc2.jpg" alt="">
             <br> <br>
 
+            <b>OBSERVAÇÕES:</b> <br>
+            <ul class="mx-3">
+                <li><b>A.</b> Caso a parcela for paga com atraso, o sistema já calcula os juros na base que foi
+                definida nos parâmetros que são, os juros por dia e mais 2% de multa pelo atraso. Esses
+                2% estão de acordo com as leis brasileiras, e nos parâmetros foi dito também, que teria
+                0,033% de juros ao dia que é outro valor que a lei permite. </li>
+                <li><b>B.</b> Observe que o sistema já jogou o valor que deve ser pago. Caso deseje esse valor
+                pode ser alterado. </li>
+                <li><b>C.</b> Clique na seta da caixa Tipo. Pagto e escolha como o aluno está efetuando o
+                pagamento. </li>
+                <li><b>D.</b> Após, clique no botão QUITAR. </li>
+                <li><b>E.</b> É aberta a tela para imprimir o comprovante de pagamento. Clique no botão do tipo
+                de sua impressora, mas caso não deseje emitir o comprovante, clique em cancelar.
+                Mesmo assim a parcela foi quitada. </li>
+                <li><b>F.</b> Se você escolheu imprimir o comprovante, uma tela de impressão foi aberta e, é só
+                clicar no botão Imprimir e depois fechar a tela. </li>
+            </ul>
+
         </p>
         `, `
             guia, aba, quita, quitar, percela, parcelas, pagamento, pagar, boleto, carnê, carne
@@ -924,8 +942,48 @@ let content = [
     [`$Caixa e contas do caixa`,
         `
         <p class="mx-2">
-            As guias Caixa e Contas do Caixa faz parte de um manual secundário apenas sobre o
-            uso do caixa dentro do sistema. Em caso de dúvidas, o manual também está disponível. <br>
+            <h4>Caixa</h4>
+            
+            <ul class="ml-3">
+                <h5>Entrada</h5>
+                <li><b>A.</b> No sistema sempre terá um caixa aberto, pois é requisito para o sistema abrir e se
+                manter aberto; </li>
+                <li><b>B.</b> Quando é dada baixa em uma mensalidade, automaticamente, é dada a entrada nesse
+                caixa. Existem ainda outras entradas, como a venda de uma apostila, um serviço de
+                impressão ou até mesmo escolas que tenham em sua unidade a venda de café,
+                refrigerantes, salgados, camisetas ou quaisquer outros itens. Nesses casos, temos que
+                dar a entrada nos valores recebidos pelos mesmos; </li>
+                <li><b>C.</b> Clique no menu MOVIMENTAÇÕES e leve o mouse à opção CAIXA. Após,
+                clique em ENTRADA CAIXA; </li>
+
+                <br>
+                <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_caixaentrada.jpg" alt="">
+                <br> <br>
+
+                <li><b>D.</b> Com a tela aberta, você pode clicar na seta e escolher o tipo de entrada. Por exemplo,
+                você dará entrada sobre a impressão feita de um arquivo solicitado pelo aluno. Então,
+                selecione a seta e clique em Impressões; </li> <br>
+
+                <b>OBSERVAÇÃO:</b> Essas movimentações variam de uma escola para outra,
+                dependendo exclusivamente do tipo de serviço ou produto oferecido pela escola,
+                sendo preciso que estejam cadastradas nas contas do caixa, já visto anteriormente.<br> <br>
+
+                <li><b>E.</b> Na caixa Descrição, digite algo que identifique essa entrada. Exemplo: Impressão
+                colorida do aluno 1010; </li>
+                <li><b>F.</b> No item Valor, digite o valor recebido. Exemplo: 3,00 reais; </li>
+
+                <br>
+                <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_caixaentrada2.jpg" alt="">
+                <br> <br>
+
+                <li><b>G.</b> Clique no botão Entrada e, após, em Ok; </li>
+                <li><b>H.</b> A entrada foi efetuada. Ao clicar em Ok, o item será fechado.  </li>
+
+                <br>
+                <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_caixaentrada3.jpg" alt="">
+                <br> <br>
+
+            </ul>
         </p>
         `, `
             guia, aba, caixa, conta, caixas, contas
