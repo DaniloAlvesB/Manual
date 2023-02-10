@@ -984,6 +984,29 @@ let content = [
                 <br> <br>
 
             </ul>
+
+            <ul class="ml-3">
+                <h5>Saída</h5>
+                <li><b>A.</b> A saída é o inverso da entrada, e segue os mesmos princípios; </li>
+                <li><b>B.</b>  Clique no menu MOVIMENTAÇÕES e leve o mouse na opção Caixa. Após, clique
+                em SAÍDA CAIXA; </li>
+                <li><b>C.</b> Selecione a opção SAÍDA PARA TRANSFERÊNCIA; </li>
+
+                <br>
+                <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_saidacaixa2.jpg" alt="">
+                <br> <br>
+
+                <li><b>D.</b> Na descrição, coloque o serviço prestado, ex: Pagamento Maria; </li>
+                <li><b>E.</b> Digite o valor da faxina. Exemplo: 50 reais; </li>
+                <li><b>F.</b> Clique no botão Retirada, e, após, em Ok; </li>
+
+                <br>
+                <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_saidacaixa.jpg" alt="">
+                <br> <br>
+
+                <li><b>G.</b> A retirada foi efetuada. Ao clicar em Ok, o item será fechado. </li>
+
+            </ul>
         </p>
         `, `
             guia, aba, caixa, conta, caixas, contas
