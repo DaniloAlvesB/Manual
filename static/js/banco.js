@@ -945,148 +945,209 @@ let content = [
             <h4>Caixa</h4>
             
             <hr>
+            <div class="border border-dark border-opacity-25 py-2 bg-white-d">
+                <p class="m-0">
+                    <div class="fs-2 m-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                            <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"></path>
+                        </svg>
+                        <a class="title-menual fs-5" data-bs-toggle="collapse" href="#entradac" role="button" aria-expanded="false" aria-controls="entradac">
+                            Entrada
+                        </a>
+                    </div>
+                </p>
+                <div class="row">
+                    <div class="col">
+                        <div id="entradac" class="collapse multi-collapse" style="padding-left: 2rem;">
+                            <ul class="ml-3">
+                                <li><b>A.</b> No sistema sempre terá um caixa aberto, pois é requisito para o sistema abrir e se
+                                manter aberto; </li>
+                                <li><b>B.</b> Quando é dada baixa em uma mensalidade, automaticamente, é dada a entrada nesse
+                                caixa. Existem ainda outras entradas, como a venda de uma apostila, um serviço de
+                                impressão ou até mesmo escolas que tenham em sua unidade a venda de café,
+                                refrigerantes, salgados, camisetas ou quaisquer outros itens. Nesses casos, temos que
+                                dar a entrada nos valores recebidos pelos mesmos; </li>
+                                <li><b>C.</b> Clique no menu MOVIMENTAÇÕES e leve o mouse à opção CAIXA. Após,
+                                clique em ENTRADA CAIXA; </li>
+                
+                                <br>
+                                <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_caixaentrada.jpg" alt="">
+                                <br> <br>
+                
+                                <li><b>D.</b> Com a tela aberta, você pode clicar na seta e escolher o tipo de entrada. Por exemplo,
+                                você dará entrada sobre a impressão feita de um arquivo solicitado pelo aluno. Então,
+                                selecione a seta e clique em Impressões; </li> <br>
+                
+                                <b>OBSERVAÇÃO:</b> Essas movimentações variam de uma escola para outra,
+                                dependendo exclusivamente do tipo de serviço ou produto oferecido pela escola,
+                                sendo preciso que estejam cadastradas nas contas do caixa, já visto anteriormente.<br> <br>
+                
+                                <li><b>E.</b> Na caixa Descrição, digite algo que identifique essa entrada. Exemplo: Impressão
+                                colorida do aluno 1010; </li>
+                                <li><b>F.</b> No item Valor, digite o valor recebido. Exemplo: 3,00 reais; </li>
+                
+                                <br>
+                                <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_caixaentrada2.jpg" alt="">
+                                <br> <br>
+                
+                                <li><b>G.</b> Clique no botão Entrada e, após, em Ok; </li>
+                                <li><b>H.</b> A entrada foi efetuada. Ao clicar em Ok, o item será fechado.  </li>
+                
+                                <br>
+                                <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_caixaentrada3.jpg" alt="">
+                                <br> <br>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            <ul class="ml-3">
-                <h5>Entrada</h5>
-                <li><b>A.</b> No sistema sempre terá um caixa aberto, pois é requisito para o sistema abrir e se
-                manter aberto; </li>
-                <li><b>B.</b> Quando é dada baixa em uma mensalidade, automaticamente, é dada a entrada nesse
-                caixa. Existem ainda outras entradas, como a venda de uma apostila, um serviço de
-                impressão ou até mesmo escolas que tenham em sua unidade a venda de café,
-                refrigerantes, salgados, camisetas ou quaisquer outros itens. Nesses casos, temos que
-                dar a entrada nos valores recebidos pelos mesmos; </li>
-                <li><b>C.</b> Clique no menu MOVIMENTAÇÕES e leve o mouse à opção CAIXA. Após,
-                clique em ENTRADA CAIXA; </li>
+            <div class="border border-dark border-opacity-25 py-2 bg-white-d">
+                <p class="m-0">
+                    <div class="fs-2 m-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                            <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"></path>
+                        </svg>
+                        <a class="title-menual fs-5" data-bs-toggle="collapse" href="#saidac" role="button" aria-expanded="false" aria-controls="saidac">
+                            Saída
+                        </a>
+                    </div>
+                </p>
+                <div class="row">
+                    <div class="col">
+                        <div id="saidac" class="collapse multi-collapse" style="padding-left: 2rem;">
+                            <ul class="ml-3">
+                                <li><b>A.</b> A saída é o inverso da entrada, e segue os mesmos princípios; </li>
+                                <li><b>B.</b>  Clique no menu MOVIMENTAÇÕES e leve o mouse na opção Caixa. Após, clique
+                                em SAÍDA CAIXA; </li>
+                                <li><b>C.</b> Selecione a opção SAÍDA PARA TRANSFERÊNCIA; </li>
+                
+                                <br>
+                                <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_saidacaixa2.jpg" alt="">
+                                <br> <br>
+                
+                                <li><b>D.</b> Na descrição, coloque o serviço prestado, ex: Pagamento Maria; </li>
+                                <li><b>E.</b> Digite o valor da faxina. Exemplo: 50 reais; </li>
+                                <li><b>F.</b> Clique no botão Retirada, e, após, em Ok; </li>
+                
+                                <br>
+                                <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_saidacaixa.jpg" alt="">
+                                <br> <br>
+                
+                                <li><b>G.</b> A retirada foi efetuada. Ao clicar em Ok, o item será fechado. </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                <br>
-                <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_caixaentrada.jpg" alt="">
-                <br> <br>
+            <div class="border border-dark border-opacity-25 py-2 bg-white-d">
+                <p class="m-0">
+                    <div class="fs-2 m-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                            <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"></path>
+                        </svg>
+                        <a class="title-menual fs-5" data-bs-toggle="collapse" href="#movc" role="button" aria-expanded="false" aria-controls="movc">
+                            Movimentações
+                        </a>
+                    </div>
+                </p>
+                <div class="row">
+                    <div class="col">
+                        <div id="movc" class="collapse multi-collapse" style="padding-left: 2rem;">
+                            <ul class="ml-3">
+                                <li><b>A.</b>  Clique no menu MOVIMENTAÇÕES e leve o mouse à opção CAIXA. Feito isso, clique em MOVIMENTO CAIXA; </li>
+                
+                                <br>
+                                <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_movcaixa.jpg" alt="">
+                                <br> <br>
+                
+                                <li><b>B.</b>   Observe que estão sendo mostradas todas as movimentações feitas e o valor de seu caixa.
+                                Nesta tela também é possível efetuar entradas e saídas da mesma forma como vimos anteriormente, apenas clicando nos botões referentes 
+                                à movimentação que deseja efetuar. </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                <li><b>D.</b> Com a tela aberta, você pode clicar na seta e escolher o tipo de entrada. Por exemplo,
-                você dará entrada sobre a impressão feita de um arquivo solicitado pelo aluno. Então,
-                selecione a seta e clique em Impressões; </li> <br>
+            <div class="border border-dark border-opacity-25 py-2 bg-white-d">
+                <p class="m-0">
+                    <div class="fs-2 m-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                            <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"></path>
+                        </svg>
+                        <a class="title-menual fs-5" data-bs-toggle="collapse" href="#fechac" role="button" aria-expanded="false" aria-controls="fechac">
+                            Fechando o caixa
+                        </a>
+                    </div>
+                </p>
+                <div class="row">
+                    <div class="col">
+                        <div id="fechac" class="collapse multi-collapse" style="padding-left: 2rem;">
+                            <ul class="ml-3">
+                                <li><b>A.</b>  Cada funcionário, quando está operando o sistema, trabalhará no caixa aberto. Quando é efetuada a troca de funcionário, 
+                                o mesmo deverá fechar o caixa, para depois, o outro funcionário abrir um novo, mesmo que nas movimentações cada funcionário logado 
+                                no sistema tenha suas devidas alterações de caixa registradas. Se o caixa for fechado à noite, somente no outro dia é que o 
+                                outro funcionário o abrirá, procedendo da seguinte forma: </li> <br>
+                
+                                O funcionário fecha o caixa e não o abre mais. Quando o novo funcionário chegar, no outro dia, este abrirá o sistema e 
+                                solicitará a abertura do caixa <br>
+                
+                                <li><b>B.</b> Na parte inferior da tela do item Movimentação do Caixa, clique no botão Fechar; </li>
+                
+                                <br>
+                                <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_fechacaixa.jpg" alt="">
+                                <br> <br>
+                
+                                <li><b>C.</b> Primeiramente, deve-se escolher para onde este dinheiro vai, ou seja, para o cofre ou
+                                para o banco, nesse exemplo está marcado Cofre; </li>
+                                <li><b>D.</b> Clique na seta da caixa <b>Destino do Caixa</b> e escolha <b>Cofre</b>; </li>
+                
+                                <br>
+                                <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_fechacaixa2.jpg" alt="">
+                                <br> <br>
+                
+                                <li><b>E.</b> Após o procedimento efetuado, vai aparecer uma mensagem solicitando que abra um novo caixa ou que feche o sistema: </li>
+                
+                                <br>
+                                <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_fechacaixa3.jpg" alt="">
+                                <br> <br>
+                
+                                <li><b>F.</b> Clique no botão ABRIR NOVO CAIXA, caso tenha ciência de quem o novo caixa estará aberto no mesmo login de 
+                                usuário de sistema escola aberto anteriormente ainda; </li>
+                                <li><b>G.</b> Caso não abra o novo caixa, apenas clique para sair do sistema; </li>
+                                <li><b>H.</b> Caso opte por abrir um novo caixa então, apenas siga os passos de abertura pela tela que aparecer; </li>
+                
+                                <br>
+                                <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_fechacaixa4.jpg" alt="">
+                                <br> <br>
+                
+                                <li><b>I.</b> Observe que o caixa foi fechado e, agora, não podemos mais efetuar nem saída nem entrada. Aparecerá a 
+                                data de fechamento na parte superior direita; </li>
+                                <li><b>J.</b> Nesse momento será de grande utilidade, imprimir o relatório do caixa, para deixar armazenada a 
+                                operação caso o procedimento não seja presenciado pela pessoa responsável pelas movimentações financeiras da 
+                                unidade. Para isso clique no botão <b>IMP. CAIXA</b> para que o relatório seja salvo e possivelmente aberto em seguida 
+                                para impressão; </li>
+                
+                                <br>
+                                <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_fechacaixa5.jpg" alt="">
+                                <br> <br>
+                
+                                <br>
+                                <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_fechacaixa6.jpg" alt="">
+                                <br> <br>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                <b>OBSERVAÇÃO:</b> Essas movimentações variam de uma escola para outra,
-                dependendo exclusivamente do tipo de serviço ou produto oferecido pela escola,
-                sendo preciso que estejam cadastradas nas contas do caixa, já visto anteriormente.<br> <br>
-
-                <li><b>E.</b> Na caixa Descrição, digite algo que identifique essa entrada. Exemplo: Impressão
-                colorida do aluno 1010; </li>
-                <li><b>F.</b> No item Valor, digite o valor recebido. Exemplo: 3,00 reais; </li>
-
-                <br>
-                <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_caixaentrada2.jpg" alt="">
-                <br> <br>
-
-                <li><b>G.</b> Clique no botão Entrada e, após, em Ok; </li>
-                <li><b>H.</b> A entrada foi efetuada. Ao clicar em Ok, o item será fechado.  </li>
-
-                <br>
-                <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_caixaentrada3.jpg" alt="">
-                <br> <br>
-
-            </ul>
-
-            <hr>
-
-            <ul class="ml-3">
-                <h5>Saída</h5>
-                <li><b>A.</b> A saída é o inverso da entrada, e segue os mesmos princípios; </li>
-                <li><b>B.</b>  Clique no menu MOVIMENTAÇÕES e leve o mouse na opção Caixa. Após, clique
-                em SAÍDA CAIXA; </li>
-                <li><b>C.</b> Selecione a opção SAÍDA PARA TRANSFERÊNCIA; </li>
-
-                <br>
-                <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_saidacaixa2.jpg" alt="">
-                <br> <br>
-
-                <li><b>D.</b> Na descrição, coloque o serviço prestado, ex: Pagamento Maria; </li>
-                <li><b>E.</b> Digite o valor da faxina. Exemplo: 50 reais; </li>
-                <li><b>F.</b> Clique no botão Retirada, e, após, em Ok; </li>
-
-                <br>
-                <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_saidacaixa.jpg" alt="">
-                <br> <br>
-
-                <li><b>G.</b> A retirada foi efetuada. Ao clicar em Ok, o item será fechado. </li>
-
-            </ul>
-
-            <hr>
-
-            <ul class="ml-3">
-                <h5>Movimentações</h5>
-                <li><b>A.</b>  Clique no menu MOVIMENTAÇÕES e leve o mouse à opção CAIXA. Feito isso, clique em MOVIMENTO CAIXA; </li>
-
-                <br>
-                <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_movcaixa.jpg" alt="">
-                <br> <br>
-
-                <li><b>B.</b>   Observe que estão sendo mostradas todas as movimentações feitas e o valor de seu caixa.
-                Nesta tela também é possível efetuar entradas e saídas da mesma forma como vimos anteriormente, apenas clicando nos botões referentes 
-                à movimentação que deseja efetuar. </li>
-            </ul>
-
-            <hr>
-
-            <ul class="ml-3">
-                <h5>Fechando o caixa</h5>
-                <li><b>A.</b>  Cada funcionário, quando está operando o sistema, trabalhará no caixa aberto. Quando é efetuada a troca de funcionário, 
-                o mesmo deverá fechar o caixa, para depois, o outro funcionário abrir um novo, mesmo que nas movimentações cada funcionário logado 
-                no sistema tenha suas devidas alterações de caixa registradas. Se o caixa for fechado à noite, somente no outro dia é que o 
-                outro funcionário o abrirá, procedendo da seguinte forma: </li> <br>
-
-                O funcionário fecha o caixa e não o abre mais. Quando o novo funcionário chegar, no outro dia, este abrirá o sistema e 
-                solicitará a abertura do caixa <br>
-
-                <li><b>B.</b> Na parte inferior da tela do item Movimentação do Caixa, clique no botão Fechar; </li>
-
-                <br>
-                <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_fechacaixa.jpg" alt="">
-                <br> <br>
-
-                <li><b>C.</b> Primeiramente, deve-se escolher para onde este dinheiro vai, ou seja, para o cofre ou
-                para o banco, nesse exemplo está marcado Cofre; </li>
-                <li><b>D.</b> Clique na seta da caixa <b>Destino do Caixa</b> e escolha <b>Cofre</b>; </li>
-
-                <br>
-                <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_fechacaixa2.jpg" alt="">
-                <br> <br>
-
-                <li><b>E.</b> Após o procedimento efetuado, vai aparecer uma mensagem solicitando que abra um novo caixa ou que feche o sistema: </li>
-
-                <br>
-                <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_fechacaixa3.jpg" alt="">
-                <br> <br>
-
-                <li><b>F.</b> Clique no botão ABRIR NOVO CAIXA, caso tenha ciência de quem o novo caixa estará aberto no mesmo login de 
-                usuário de sistema escola aberto anteriormente ainda; </li>
-                <li><b>G.</b> Caso não abra o novo caixa, apenas clique para sair do sistema; </li>
-                <li><b>H.</b> Caso opte por abrir um novo caixa então, apenas siga os passos de abertura pela tela que aparecer; </li>
-
-                <br>
-                <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_fechacaixa4.jpg" alt="">
-                <br> <br>
-
-                <li><b>I.</b> Observe que o caixa foi fechado e, agora, não podemos mais efetuar nem saída nem entrada. Aparecerá a 
-                data de fechamento na parte superior direita; </li>
-                <li><b>J.</b> Nesse momento será de grande utilidade, imprimir o relatório do caixa, para deixar armazenada a 
-                operação caso o procedimento não seja presenciado pela pessoa responsável pelas movimentações financeiras da 
-                unidade. Para isso clique no botão IMP. CAIXA para que o relatório seja salvo e possivelmente aberto em seguida 
-                para impressão; </li>
-
-                <br>
-                <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_fechacaixa5.jpg" alt="">
-                <br> <br>
-
-                <br>
-                <img class="img-fluid my-2 img-exp" src="static/images/movimentacao/mov_fechacaixa6.jpg" alt="">
-                <br> <br>
-            </ul>
+            
         </p>
 
         <br>
-        
+
         <h4>Contas do caixa</h4>
         <p>
             Esta opção nos permite visualizar todas as nossas contas, o cofre, o banco, aplicações,
