@@ -640,35 +640,37 @@ let content = [
             <br> <br>
 
             <ul class="mx-3">
-                <li><b>A.</b> Entre no menu MANUTENÇÃO e clique na opção PLANO DE CONTAS. </li>
-                <li><b>B.</b> Onde está Empresa, coloque o nome fantasia de sua empresa. </li>
+                <li><b>A.</b> Entre no menu MANUTENÇÃO e clique na opção PLANO DE CONTAS; </li>
+                <li><b>B.</b> Onde está Empresa, coloque o nome fantasia de sua empresa; </li>
 
                 <br>
                 <img class="img-fluid my-2 img-exp" src="static/images/planodecontas/pc2.jpg" alt="plano de contas">
                 <br> <br>
 
                 <li><b>C.</b> Clique sobre a seleção Expandir da guia para abrir a sequência do cadastro de plano
-                de contas. Uma outra guia aparecerá na frente, Nível 2, sobrepondo o item anterior. </li>
+                de contas. Uma outra guia aparecerá na frente, Nível 2, sobrepondo o item anterior; </li>
 
                 <br>
                 <img class="img-fluid my-2 img-exp" src="static/images/planodecontas/pc3.jpg" alt="plano de contas">
                 <br> <br>
 
-                <><b>D.</b> Igualmente como em outros itens, na caixa que aparece, as opções são editáveis,
-                poderá alterar os nomes das funções ou acrescentar outros clicando no botão Inserir. <br>
-                Para remover um item clica-se no botão Apagar. </li> <br>
-                OBSERVAÇÃO: Não altere as funções básicas do sistema, previamente
-                cadastradas.
+                <li><b>D.</b> Igualmente como em outros itens, na caixa que aparece, as opções são editáveis,
+                poderá alterar os nomes das funções ou acrescentar outros clicando no botão Inserir; <br>
+                Para remover um item clica-se no botão Apagar; </li> <br>
+
+                <b>OBSERVAÇÃO:</b> Não altere as funções básicas do sistema, previamente
+                cadastradas. <br>
+
                 <li><b>E.</b> Ao clicar sobre a seleção da guia Expandir da nova caixa Nível 2, do item Alunos,
                 aparecerá uma nova caixa, Nível 3, mostrando os itens dessa seleção, onde os mesmos
                 também poderão ser alterados ou incluir novos como da forma anterior, dependendo da
-                sua padronização de contas da unidade. </li>
+                sua padronização de contas da unidade; </li>
 
                 <br>
                 <img class="img-fluid my-2 img-exp" src="static/images/planodecontas/pc4.jpg" alt="plano de contas">
                 <br> <br>
 
-                <li><b>F.</b> O mesmo poderá ser feito ao clicar na seleção da guia Expansão do item Caixa. </li>
+                <li><b>F.</b> O mesmo poderá ser feito ao clicar na seleção da guia Expansão do item Caixa; </li>
 
                 <br>
                 <img class="img-fluid my-2 img-exp" src="static/images/planodecontas/pc5.jpg" alt="plano de contas">
@@ -716,8 +718,26 @@ let content = [
     [`Contas do caixa`,
         `
         <p class="mx-2">
-            A guia Contas do Caixa faz parte de um manual secundário apenas sobre o uso do caixa
-            dentro do sistema. Em caso de dúvidas, o manual também se encontra disponível.
+            Esta opção nos permite visualizar todas as nossas contas, o cofre, o banco, aplicações,
+            entre outros, além de ver quanto tem-se em cada caixa e o valor total do dinheiro em
+            caixa. <br>
+            <ul>
+                <li><b>A.</b> Posicione o mouse no menu <b>MOVIMENTAÇÃO</b> e, após, clique em <b>CONTAS DO
+                CAIXA</b>; </li>
+
+                <br>
+                <img class="img-fluid my-2 img-exp" src="static/images/manutencao/contas_caixa.jpg" alt="Campo nome do aluno">
+                <br> <br>
+
+                <li><b>B.</b> Note que apareceu a conta cofre como padrão e, na parte inferior, os botões, caso
+                desejemos efetuar alguma entrada ou saída. Nos resultados aparecerão juntamente, o
+                valor que temos no cofre no momento e o valor geral do caixa (a soma de todas as
+                contas que, no exemplo, estão zeradas);  </li>
+                <li><b>C.</b> Na parte superior, clique na seta da caixa Contas do Caixa e escolha Banco; </li>
+                <li><b>D.</b> Assim, serão mostrados os valores existentes neste tipo de caixa. Se for efetuar algum
+                pagamento com cheque ou depositar algum dinheiro nessa conta, é preciso usar os
+                botões abaixo na tela. </li>
+            <ul>
         </p>
         `, `
             guia, aba, manutenção, manutencao, conta, contas, caixa
