@@ -1969,7 +1969,8 @@ let content = [
     [`Trinamento completo`,
         `
         <p class="mx-2">
-            <a class="btn btn-success" href='http://www.videostutoriais.grupooportunidade.com.br/suporte/videos/sistema/TREINAMENTO%20COMPLETO.mp4' target='_blank'>Acessar</a>
+            Clicando no botão "Acessar" abaixo você será direcionado para um treinamento completo do sisema. <br>
+            <a class="btn btn-success mt-3" href='http://www.videostutoriais.grupooportunidade.com.br/suporte/videos/sistema/TREINAMENTO%20COMPLETO.mp4' target='_blank'>Acessar</a>
         </p>
         `, `
             guia, aba, 
