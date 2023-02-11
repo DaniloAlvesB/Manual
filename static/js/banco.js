@@ -1969,15 +1969,7 @@ let content = [
     [`Trinamento completo`,
         `
         <p class="mx-2">
-            <div class="ratio ratio-16x9">
-                <iframe src="http://www.videostutoriais.grupooportunidade.com.br/suporte/videos/sistema/TREINAMENTO%20COMPLETO.mp4" allowfullscreen>
-            </div>
-            <br>
-            <img class="img-fluid my-2 img-exp" src="static/images/" alt="">
-            <br> <br>
-
-            <button class="btn btn-success text-white"><b>x</b> CANCELA MATRÍCULA</button>
-
+            <a class="btn btn-success" href='http://www.videostutoriais.grupooportunidade.com.br/suporte/videos/sistema/TREINAMENTO%20COMPLETO.mp4' target='_blank'>Acessar</a>
         </p>
         `, `
             guia, aba, 
