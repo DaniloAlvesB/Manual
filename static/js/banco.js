@@ -13,6 +13,7 @@ let title1 = [
     ["Guia Movimentação", 'c_guiamovimentacao', true, 9],      //8
     ["Guia Relatórios", 'c_guiarelatorios', true, 10],      //9
     ["Guia Outras Opções", 'c_guiaoutrasop', true, 11],      //10
+    ["Mais infomações", 'c_mais', true, 12],      //11
 ]
 
 let title2 = [
@@ -91,6 +92,9 @@ let title2 = [
     ["Sobre a guia Outras Opções", "op_sobre", 44, 10],
     ["Perfil", "op_perfil", 45, 10],
     ["Parâmetros", "op_para", 46, 10],
+
+    //Title - 11
+    ["Treinamento completo", "op_treina", 47, 11],
 
 ]
 
@@ -766,7 +770,50 @@ let content = [
     [`Telemarketing`,
         `
         <p class="mx-2">
-            Essa guia faz parte de um manual secundário que explica o uso dela separadamente. 
+            Para cadastrar um novo contato (lead):
+            No campo superior esquerdo, clique em <b>MOVIMENTAÇÃO > +NOVO CONTATO</b>
+
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/manutencao/man_tele1.jpg" alt="Campo nome do aluno">
+            <br> <br>
+
+            Clique em <button class="btn btn-warning text-light"><b>+</b> criar pessoas – LEADS</button>
+
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/manutencao/man_tele2.png" alt="Campo nome do aluno">
+            <br> <br>
+
+            Preencha todos os campos, com as informações do novo lead e clique em gravar
+
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/manutencao/man_tele3.png" alt="Campo nome do aluno">
+            <br> <br>
+
+            Após gravar o novo lead, aparecerá uma mensagem no campo superior direito “lead adicionado com sucesso”, 
+            e abrirá uma tela para preencher com observações do contato com esse novo lead no campo “conversa”, e agendar 
+            um retorno.
+            Obs: no campo retorno, edite com uma nova data e/ou horário para que o sistema o lembre de retornar para o lead.
+            Escolha um status para esse lead (ex: entrar em contato, visita agendada e etc.)
+            Clique em gravar e depois em fechar.
+
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/manutencao/man_tele4.png" alt="Campo nome do aluno">
+            <br> <br>
+
+            O novo contato foi adicionado, e ficará no topo da lista.
+            Você poderá editar o cadastro desse lead clicando no “lápis”, adicionar uma nova informação de contato clicando 
+            no “+”  ou excluir o registro.
+
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/manutencao/man_tele5.png" alt="Campo nome do aluno">
+            <br> <br>
+
+            Relatórios da função telemarketing
+            Você poderá visualizar os retornos agendados e as metas de cada funcionário (de ligações, de visitas, fechamentos 
+             de matrículas e etc.) 
+            Os retornos agendados serão notificados na página inicial da função telemarketing e clicando em “sim”, 
+            abrirá uma lista com esses contatos que viocê poderá baixar, escolhendo o formato do arquivo!
+        
         </p>
         `, `
             guia, aba, manutenção, manutencao, marketing, tele
@@ -823,7 +870,7 @@ let content = [
         `, `
             guia, aba, cancela, cancelamento, matri, matricula
         `,
-        ""
+        "http://www.videostutoriais.grupooportunidade.com.br/suporte/videos/sistema/7.html"
     ],
 
     //25
@@ -845,7 +892,7 @@ let content = [
         `, `
             guia, aba, reativar, reativa, voltar, matri, matricula
         `,
-        ""
+        "http://www.videostutoriais.grupooportunidade.com.br/suporte/videos/sistema/14.html"
     ],
 
     //26
@@ -1918,6 +1965,25 @@ let content = [
      `,
      ""
  ],
+
+    [`Trinamento completo`,
+        `
+        <p class="mx-2">
+            <div class="ratio ratio-16x9">
+                <iframe src="http://www.videostutoriais.grupooportunidade.com.br/suporte/videos/sistema/TREINAMENTO%20COMPLETO.mp4" allowfullscreen>
+            </div>
+            <br>
+            <img class="img-fluid my-2 img-exp" src="static/images/" alt="">
+            <br> <br>
+
+            <button class="btn btn-success text-white"><b>x</b> CANCELA MATRÍCULA</button>
+
+        </p>
+        `, `
+            guia, aba, 
+        `,
+        ""
+    ],
 ]
 
 /*
